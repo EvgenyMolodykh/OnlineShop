@@ -54,7 +54,8 @@
                    Grid.ColumnSpan="4" Background="{DynamicResource {x:Static SystemColors.ControlDarkBrushKey}}" FontSize="24" HorizontalAlignment="Right" Width="269"/>
         <Button x:Name="SevenButton" Content="7" 
             Grid.Row="1" 
-            Style="{StaticResource NumberButton}" Click="SevenButton_Click"/>
+            Style="{StaticResource NumberButton}" 
+            Click="SevenButton_Click"/>
         <Button x:Name="EightButton" Content="8" 
             Grid.Row="1"
             Grid.Column="1"

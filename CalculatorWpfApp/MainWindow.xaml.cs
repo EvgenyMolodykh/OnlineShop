@@ -5,10 +5,10 @@ namespace CalculatorWpfApp
 {
     public partial class MainWindow : Window
     {
-        private string NumberOne; 
+        private string NumberOne;
         private string NumberTwo;
         private string Operation;
-        private bool OperationSet; 
+        private bool OperationSet;
 
         public MainWindow()
         {
@@ -29,7 +29,7 @@ namespace CalculatorWpfApp
         {
             if (ResultTextBlock.Text == "0" && !OperationSet)
             {
-                ResultTextBlock.Text = number.ToString(); 
+                ResultTextBlock.Text = number.ToString();
             }
             else if (!OperationSet)
             {
@@ -39,7 +39,7 @@ namespace CalculatorWpfApp
             {
                 if (ResultTextBlock.Text == "0")
                 {
-                    ResultTextBlock.Text = number.ToString(); 
+                    ResultTextBlock.Text = number.ToString();
                 }
                 else
                 {
@@ -62,7 +62,7 @@ namespace CalculatorWpfApp
         {
             if (string.IsNullOrEmpty(Operation) || !OperationSet) return;
 
-            NumberTwo = ResultTextBlock.Text; 
+            NumberTwo = ResultTextBlock.Text;
 
             try
             {
