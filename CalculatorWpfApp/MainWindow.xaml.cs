@@ -1,5 +1,4 @@
-﻿using System;
-using System.Windows;
+﻿using System.Windows;
 
 namespace CalculatorWpfApp
 {
@@ -123,7 +122,7 @@ namespace CalculatorWpfApp
             AddNumber(3);
         }
 
-        private void Button_Click_1(object sender, RoutedEventArgs e)
+        private void Button_Click(object sender, RoutedEventArgs e)
         {
             AddNumber(4);
         }
@@ -153,7 +152,7 @@ namespace CalculatorWpfApp
             AddNumber(9);
         }
 
-        private void ZeroButton_Click_1(object sender, RoutedEventArgs e)
+        private void ZeroButton_Click(object sender, RoutedEventArgs e)
         {
             AddNumber(0);
         }

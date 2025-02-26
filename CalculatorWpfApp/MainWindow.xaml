@@ -5,31 +5,34 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CalculatorWpfApp"
         mc:Ignorable="d"
-        Title="MainWindow" Height="346" Width="297">
+        Title="MainWindow" Height="280" 
+                           Width="270" 
+                           MaxHeight="400" 
+                           MaxWidth="350" 
+                           MinHeight="270" 
+                           MinWidth="190">
     <Window.Resources>
         <Style x:Key="NumberButton" TargetType="Button">
-            <Setter Property="Margin" Value="14,0,14,0"/>
-            <Setter Property="Height" Value="46"/>
-            <Setter Property="Width" Value="46"/>
+            <Setter Property="Margin" Value="5"/>
             <Setter Property="FontSize" Value="24"/>
+            <Setter Property="HorizontalAlignment" Value="Stretch"/>
+            <Setter Property="VerticalAlignment" Value="Stretch"/>
             <Setter Property="HorizontalContentAlignment" Value="Center"/>
-            <Setter Property="VerticalAlignment" Value="Center"/>
             <Setter Property="BorderThickness" Value="2"/>
         </Style>
         <Style x:Key="NumberAtion" TargetType="Button">
-            <Setter Property="Margin" Value="14,0,14,0"/>
-            <Setter Property="Height" Value="46"/>
-            <Setter Property="Width" Value="46"/>
+            <Setter Property="Margin" Value="5"/>
             <Setter Property="FontSize" Value="24"/>
             <Setter Property="HorizontalContentAlignment" Value="Center"/>
-            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="VerticalAlignment" Value="Stretch"/>
+            <Setter Property="HorizontalAlignment" Value="Stretch"/>
             <Setter Property="BorderThickness" Value="2"/>
             <Setter Property="Background" Value="Black"/>
             <Setter Property="Foreground" Value="White"/>
         </Style>
 
     </Window.Resources>
-    <Grid x:Name="ResultButton1">
+    <Grid x:Name="ResultButton1" Margin="5">
         <Grid.RowDefinitions>
             <RowDefinition/>
             <RowDefinition/>
@@ -45,13 +48,19 @@
         </Grid.ColumnDefinitions>
 
         <TextBlock x:Name="ResultTextBlock" 
-                   Margin="0,20,14,0" 
+                   Margin="5" 
                    TextWrapping="Wrap" 
                    Text="" 
-                   VerticalAlignment="Top"
-                   Height="33"
+                   MinHeight="35"
+                   MaxHeight="35"
+                   VerticalAlignment="Stretch"
+                   HorizontalAlignment="Stretch"                   
                    Grid.Row="0"
-                   Grid.ColumnSpan="4" Background="{DynamicResource {x:Static SystemColors.ControlDarkBrushKey}}" FontSize="24" HorizontalAlignment="Right" Width="269"/>
+                   Grid.ColumnSpan="4" 
+                   Background="{DynamicResource {x:Static SystemColors.ControlDarkBrushKey}}" 
+                   FontSize="24" 
+                   MaxWidth="390"
+                   MinWidth="200"/>
         <Button x:Name="SevenButton" Content="7" 
             Grid.Row="1" 
             Style="{StaticResource NumberButton}" 
@@ -67,10 +76,10 @@
         <Button x:Name="SummButton" Content="+" 
             Grid.Row="1" 
             Grid.Column="3"
-            Style="{StaticResource NumberAtion}" Click="SummButton_Click" HorizontalAlignment="Left" Margin="14,0,0,0" Width="46"/>
+            Style="{StaticResource NumberAtion}" Click="SummButton_Click"/>
         <Button x:Name="FourButton" Content="4" 
             Grid.Row="2"
-            Style="{StaticResource NumberButton}" Click="Button_Click_1"/>
+            Style="{StaticResource NumberButton}" Click="Button_Click"/>
         <Button x:Name="FiveButton" Content="5" 
             Grid.Row="2" 
             Grid.Column="1"
@@ -106,7 +115,7 @@
         <Button x:Name="ZeroButton" Content="0" 
             Grid.Row="4" 
             Grid.Column="1"
-            Style="{StaticResource NumberButton}" Click="ZeroButton_Click_1"/>
+            Style="{StaticResource NumberButton}" Click="ZeroButton_Click"/>
         <Button x:Name="ResultButton" Content="=" 
             Grid.Row="4" 
             Grid.Column="2"
