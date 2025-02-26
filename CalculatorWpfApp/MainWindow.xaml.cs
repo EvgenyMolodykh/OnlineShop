@@ -19,18 +19,12 @@ namespace CalculatorWpfApp
         public MainWindow()
         {
             InitializeComponent();
-
-            calculateButton.Click += CalculateButton_Click;
+ 
         }
 
-        private void CalculateButton_Click(object sender, RoutedEventArgs e)
+        private void Button_Click(object sender, RoutedEventArgs e)
         {
-            var firstNumber = Convert.ToInt32(firstNumberTextBox.Text);
-            var secondNumber = Convert.ToInt32(secondNumberTextBox.Text);
-
-            var total = firstNumber + secondNumber;
-
-            resultLabel.Content = total.ToString();
+            MessageBox.Show("Hello World");
         }
     }
 }
