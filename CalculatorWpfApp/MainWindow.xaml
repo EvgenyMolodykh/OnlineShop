@@ -51,7 +51,11 @@
                    VerticalAlignment="Top"
                    Height="33"
                    Grid.Row="0"
-                   Grid.ColumnSpan="4" Background="{DynamicResource {x:Static SystemColors.ControlDarkBrushKey}}" FontSize="24" HorizontalAlignment="Right" Width="269"/>
+                   Grid.ColumnSpan="4" 
+                   Background="#FFB6BDB6" 
+                   FontSize="24" 
+                   HorizontalAlignment="Right" 
+                   Width="269"/>
         <Button Content="7" 
             Grid.Row="1" 
             Style="{StaticResource NumberButton}"/>
