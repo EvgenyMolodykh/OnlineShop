@@ -57,11 +57,13 @@
                    HorizontalAlignment="Stretch"                   
                    Grid.Row="0"
                    Grid.ColumnSpan="4" 
-                   Background="{DynamicResource {x:Static SystemColors.ControlDarkBrushKey}}" 
+
+                   Background="#FFB6BDB6" 
                    FontSize="24" 
-                   MaxWidth="390"
-                   MinWidth="200"/>
-        <Button x:Name="SevenButton" Content="7" 
+                   HorizontalAlignment="Right" 
+                   Width="269"/>
+        <Button Content="7" 
+
             Grid.Row="1" 
             Style="{StaticResource NumberButton}" 
             Click="SevenButton_Click"/>
