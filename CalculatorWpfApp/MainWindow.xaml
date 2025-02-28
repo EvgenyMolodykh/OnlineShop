@@ -57,10 +57,8 @@
                    HorizontalAlignment="Stretch"                   
                    Grid.Row="0"
                    Grid.ColumnSpan="4" 
-
                    Background="#FFB6BDB6" 
                    FontSize="24" 
-                   HorizontalAlignment="Right" 
                    Width="269"/>
         <Button Content="7" 
 
