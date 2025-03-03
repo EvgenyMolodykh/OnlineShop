@@ -7,7 +7,14 @@ namespace Autorization
         public MainWindow()
         {
             InitializeComponent();
-            Register_Button.Click += Register_Button_Click; 
+            Register_Button.Click += Register_Button_Click;
+            SingIn_Button.Click += SingIn_Button_Click;
+        }
+
+        private void SingIn_Button_Click(object sender, RoutedEventArgs e)
+        {
+            var SingInWindow = new SingInWindow();
+            SingInWindow.Show();
         }
 
         private void Register_Button_Click(object sender, RoutedEventArgs e)

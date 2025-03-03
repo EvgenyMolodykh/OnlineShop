@@ -7,6 +7,12 @@ namespace Autorization
         public SingInWindow()
         {
             InitializeComponent();
+            SingIn_Button.Click += SingIn_Button_Click;
+        }
+
+        private void SingIn_Button_Click(object sender, RoutedEventArgs e)
+        {
+            Close();
         }
     }
 }
