@@ -16,27 +16,6 @@
             <Setter Property="FontSize" Value="15"/>
             <Setter Property="Foreground" Value="#FF534C4C"/>
         </Style>
-        <Style x:Key="RoundedButtonStyle" TargetType="Button">
-            <Setter Property="Background" Value="LightBlue"/>
-            <Setter Property="BorderBrush" Value="Black"/>
-            <Setter Property="BorderThickness" Value="1.5"/>
-            <Setter Property="Template">
-                <Setter.Value>
-                    <ControlTemplate TargetType="Button">
-                        <Border Background="{TemplateBinding Background}" 
-                                BorderBrush="{TemplateBinding BorderBrush}" 
-                                BorderThickness="{TemplateBinding BorderThickness}" 
-                                CornerRadius="8">
-                            <ContentPresenter HorizontalAlignment="Center"
-                                              VerticalAlignment="Center"/>
-                        </Border>
-                    </ControlTemplate>
-                </Setter.Value>
-            </Setter>
-            <Setter Property="FontSize" Value="15"/>
-            <Setter Property="FontWeight" Value="Bold"/>
-            <Setter Property="Foreground" Value="Black"/>
-        </Style>
         <Style x:Key="ButtonStyleRegistration" TargetType="{x:Type Button}">
             <Setter Property="Background" Value="LightBlue"/>
             <Setter Property="BorderBrush" Value="Black"/>
@@ -58,6 +37,8 @@
             <Setter Property="FontSize" Value="15"/>
             <Setter Property="FontWeight" Value="Bold"/>
             <Setter Property="Foreground" Value="#FF0E160E"/>
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
         </Style>
     </Window.Resources>
     <Grid>
@@ -129,8 +110,6 @@
         <Button x:Name="Registration_Button"
                 Grid.Row="4"
                 Content="Зарегистрироваться"
-                HorizontalAlignment="Center"
-                VerticalAlignment="Center"
                 Width="170"
                 Height="30"
                 Style="{StaticResource ButtonStyleRegistration}" Background="#FF64CCF1"/>
