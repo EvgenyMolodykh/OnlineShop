@@ -8,7 +8,7 @@
         Title="SingInWindow" 
         Height="300" 
         Width="400"
-        Background="AliceBlue">
+        Background="#FFC0D7EB">
     <Window.Resources>
         <Style x:Key="TextStyle" TargetType="Label">
             <Setter Property="HorizontalAlignment" Value="Center"/>
