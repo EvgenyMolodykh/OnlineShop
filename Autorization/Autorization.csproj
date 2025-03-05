@@ -9,7 +9,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Windows\" />
+    <Folder Include="Users\" />
   </ItemGroup>
 
 </Project>

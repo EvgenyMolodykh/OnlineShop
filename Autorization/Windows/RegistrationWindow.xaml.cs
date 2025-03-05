@@ -16,6 +16,7 @@ namespace Autorization
             var login = RegLogin_TextBox.Text;
             var password = RegPassword_TextBox.Text;
             var confirmPassword = ConfirmPassword_TextBox.Text;
+            User user = new User(login,password,confirmPassword);
 
             if (string.IsNullOrEmpty(login))
             {
@@ -41,12 +42,16 @@ namespace Autorization
                 return;
             }
 
-            RegisterUser();
+            RegisterUser(user);
         }
 
-        private void RegisterUser()
+        private void RegisterUser(User user)
         {
+            UserManagement.AddUser(user);
             MessageBox.Show("Вы успешно зарегестрировались");
+            Close();
+            MainWindow mainWindow = new MainWindow();
+            mainWindow.Show();
         }
     }
 }

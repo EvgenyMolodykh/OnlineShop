@@ -14,12 +14,13 @@ namespace Autorization
         private void SingIn_Button_Click(object sender, RoutedEventArgs e)
         {
             var SingInWindow = new SingInWindow();
+            Hide();
             SingInWindow.Show();
         }
-
         private void Register_Button_Click(object sender, RoutedEventArgs e)
         {
             var RegistrationWindow = new RegistrationWindow();
+            Hide();
             RegistrationWindow.Show();
         }
     }
