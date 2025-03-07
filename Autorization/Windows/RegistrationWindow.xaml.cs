@@ -13,6 +13,8 @@ namespace Autorization
         private void Registration_Button_Click(object sender, RoutedEventArgs e)
         {
             
+
+
             var login = RegLogin_TextBox.Text;
             var password = RegPassword_TextBox.Text;
             var confirmPassword = ConfirmPassword_TextBox.Text;

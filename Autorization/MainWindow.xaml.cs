@@ -13,15 +13,22 @@ namespace Autorization
 
         private void SingIn_Button_Click(object sender, RoutedEventArgs e)
         {
-            var SingInWindow = new SingInWindow();
+            var signInWindow = new SingInWindow();
             Hide();
-            SingInWindow.Show();
+            signInWindow.ShowDialog();
         }
+
         private void Register_Button_Click(object sender, RoutedEventArgs e)
         {
-            var RegistrationWindow = new RegistrationWindow();
+            LoginName_Label.Visibility = Visibility.Hidden;
+            PersonalDesk_Label.Visibility = Visibility.Hidden;
+            SingOut_Button.Visibility = Visibility.Hidden;
+            SingIn_Button.Visibility = Visibility.Hidden;
+            Register_Button.Visibility = Visibility.Hidden;
+
+            var registrationWindow = new RegistrationWindow();
             Hide();
-            RegistrationWindow.Show();
+            registrationWindow.Show();
         }
     }
 }

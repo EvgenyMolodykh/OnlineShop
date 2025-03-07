@@ -11,7 +11,7 @@ namespace Autorization
         }
 
         private void SingIn_Button_Click(object sender, RoutedEventArgs e)
-        {
+        { 
             
             if (string.IsNullOrEmpty(RegLogin_TextBox.Text) && string.IsNullOrEmpty(RegPassword_TextBox.Text)) 
             {
