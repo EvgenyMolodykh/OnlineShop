@@ -28,7 +28,8 @@ namespace Autorization
 
             var registrationWindow = new RegistrationWindow();
             Hide();
-            registrationWindow.Show();
+            registrationWindow.ShowDialog();
         }
+
     }
 }

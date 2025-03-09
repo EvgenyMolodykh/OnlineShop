@@ -43,7 +43,6 @@
         <Button x:Name="Register_Button" 
             Grid.Column="2" 
             Grid.Row="1" 
-            Content="Регистрация">
-        </Button>
+            Content="Регистрация"/>
     </Grid>
 </Window>
