@@ -1,9 +1,11 @@
 ﻿using System.Windows;
 
+
 namespace Autorization
 {
     public partial class RegistrationWindow : Window
     {
+        UserStorage UserStorage = new UserStorage();
         public RegistrationWindow()
         {
             InitializeComponent();
@@ -12,48 +14,44 @@ namespace Autorization
 
         private void Registration_Button_Click(object sender, RoutedEventArgs e)
         {
-            
+            var inputLogin = RegLogin_TextBox.Text;
+            var inputPassword = RegPassword_TextBox.Text;
+            var inputConfirmPassword = ConfirmPassword_TextBox.Text;
+            validationInputRegister(inputLogin, inputPassword, inputConfirmPassword);
+            var userRegister = new User(inputLogin, inputPassword, inputConfirmPassword);
+            userRegister.IsSingIn = true;
+            UserStorage.Add(userRegister);
+            MessageBox.Show("Пользователь успешно зарегистрирован");
+            Close();
+        }
 
-
-            var login = RegLogin_TextBox.Text;
-            var password = RegPassword_TextBox.Text;
-            var confirmPassword = ConfirmPassword_TextBox.Text;
-            User user = new User(login,password,confirmPassword);
-
-            if (string.IsNullOrEmpty(login))
+        private void validationInputRegister(string inputLogin, string inputPassword, string inputConfirmPassword)
+        {
+            if (string.IsNullOrEmpty(inputLogin))
             {
                 MessageBox.Show("Логин не может быть пустым");
                 return;
             }
 
-            if (string.IsNullOrEmpty(password))
+            if (string.IsNullOrEmpty(inputPassword))
             {
                 MessageBox.Show("Пароль не может быть пустым");
                 return;
             }
 
-            if (string.IsNullOrEmpty(confirmPassword))
+            if (string.IsNullOrEmpty(inputPassword))
             {
                 MessageBox.Show("Поле подтверждения пароля не может быть пустым");
                 return;
             }
 
-            if (password != confirmPassword)
+            if (inputPassword != inputPassword)
             {
                 MessageBox.Show("Пароли не совпадают");
                 return;
             }
-
-            RegisterUser(user);
         }
 
-        private void RegisterUser(User user)
-        {
-            UserManagement.AddUser(user);
-            MessageBox.Show("Вы успешно зарегестрировались");
-            Close();
-            MainWindow mainWindow = new MainWindow();
-            mainWindow.Show();
-        }
+        
     }
 }

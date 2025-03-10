@@ -7,6 +7,8 @@
         public string Password { get; set; }
         public string ConformPassword { get; set; }
 
+        public bool IsSingIn { get; set; }
+
         public User(string login, string password, string conformPassword) 
         {
             this.Id = Guid.NewGuid();
@@ -14,6 +16,6 @@
             this.Password = password;
             this.ConformPassword = conformPassword;
         }
-       
+
     }
 }

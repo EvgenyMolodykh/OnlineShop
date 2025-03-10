@@ -19,7 +19,7 @@ namespace Autorization
                 return;
             }
 
-            var user = UserManagement.GetUser(RegLogin_TextBox.Text);
+            var user = FileProvider.GetUser(RegLogin_TextBox.Text);
             if (user != null) {
                 if (RegPassword_TextBox.Text == user.Password)
                 { 
