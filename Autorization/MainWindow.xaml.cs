@@ -35,6 +35,7 @@ namespace Autorization
         }
         private void SingIn_Button_Click(object sender, RoutedEventArgs e)
         {
+            Autorized();
             var signInWindow = new SingInWindow();
             signInWindow.ShowDialog();
         }

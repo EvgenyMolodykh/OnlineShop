@@ -11,30 +11,51 @@ namespace Autorization
         }
 
         private void SingIn_Button_Click(object sender, RoutedEventArgs e)
-        { 
+        {
+            ValidationInput();
+            var login = RegLogin_TextBox.Text;
+            var password = RegPassword_TextBox.Text;
+            var rememberMe = RememberMe_Chebox.IsChecked;
+            var user = UserStorage.GetUser(login);
+
+            var userStorage = new UserStorage();
+            var singInUser = userStorage.GetSingInUser();/*Пользователь с false или true*/
+            if (singInUser != null)
+            {
+                MessageBox.Show("Пользователь уже авторизован");
+                return;
+            }
             
-            if (string.IsNullOrEmpty(RegLogin_TextBox.Text) && string.IsNullOrEmpty(RegPassword_TextBox.Text)) 
+            var existingUser = UserStorage.GetUser(login);/*null*/
+            if (existingUser == null)
+            {
+                MessageBox.Show("Пользователь не найден");
+                return;
+            }
+            if (existingUser != null) 
+            {
+                if (existingUser.Password == password)
+                {
+                    existingUser.IsSingIn = true;
+                    FileProvider.Save(existingUser, UserStorage.fileName);
+                    MessageBox.Show("Вы успешно авторизовались");
+                    Close();
+                }
+                else
+                {
+                    MessageBox.Show("Неверный пароль");
+                    return;
+                }
+            }
+        }
+
+        private void ValidationInput()
+        {
+            if (string.IsNullOrEmpty(RegLogin_TextBox.Text) && string.IsNullOrEmpty(RegPassword_TextBox.Text))
             {
                 MessageBox.Show("Заполните поля входа");
                 return;
             }
-
-            var user = FileProvider.GetUser(RegLogin_TextBox.Text);
-            if (user != null) {
-                if (RegPassword_TextBox.Text == user.Password)
-                { 
-                    MessageBox.Show("Вы успешно авторизировались");
-                    Close();
-                    MainWindow mainWindow = new MainWindow();
-                    mainWindow.Show();
-                }
-                else
-                {
-                    MessageBox.Show("Не верный пароль");
-                    return;
-                }
-            }
-            else { MessageBox.Show("Такого пользователя не существует"); }
         }
     }
 }

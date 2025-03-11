@@ -5,22 +5,9 @@ namespace Autorization
 {
     public static class FileProvider
     {
-        
-
-        private static List<User> users = new List<User>();
-        public static void AddUser(User user)
-        {
-            users.Add(user);
-        }
-
-        public static User GetUser(string login)
-        {
-            return users.FirstOrDefault(u => u.Login == login);
-        }
         public static void Save(object data, string fileName)
         {
             var options = new JsonSerializerOptions { WriteIndented = true };
-
             string serializedData = JsonSerializer.Serialize(data, options);
             if(File.Exists(fileName))
             {
@@ -45,7 +32,6 @@ namespace Autorization
             {
                 return default;
             }
-
             return JsonSerializer.Deserialize<T>(serializedData);
         }
     }
