@@ -19,6 +19,7 @@ namespace Autorization
                 File.WriteAllText(fileName, serializedData);
             }
         }
+
         public static T Load<T>(string fileName)
         {
             if (!File.Exists(fileName)) 

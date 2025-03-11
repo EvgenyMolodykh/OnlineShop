@@ -19,25 +19,26 @@ namespace Autorization
             var user = UserStorage.GetUser(login);
 
             var userStorage = new UserStorage();
-            var singInUser = userStorage.GetSingInUser();/*Пользователь с false или true*/
+            var singInUser = userStorage.GetSingInUser();
             if (singInUser != null)
             {
                 MessageBox.Show("Пользователь уже авторизован");
                 return;
             }
-            
-            var existingUser = UserStorage.GetUser(login);/*null*/
+
+            var users = FileProvider.Load<List<User>>(UserStorage.fileName) ?? new List<User>();
+            var existingUser = users.FirstOrDefault(u => u.Login == login);
             if (existingUser == null)
             {
                 MessageBox.Show("Пользователь не найден");
                 return;
             }
-            if (existingUser != null) 
+            if (existingUser != null)
             {
                 if (existingUser.Password == password)
                 {
                     existingUser.IsSingIn = true;
-                    FileProvider.Save(existingUser, UserStorage.fileName);
+                    FileProvider.Save(users, UserStorage.fileName);
                     MessageBox.Show("Вы успешно авторизовались");
                     Close();
                 }

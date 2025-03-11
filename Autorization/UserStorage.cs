@@ -16,6 +16,7 @@
         }
         public User GetSingInUser()
         {
+          
             return users.FirstOrDefault(u => u.IsSingIn);
         }
         public void SingOut()
