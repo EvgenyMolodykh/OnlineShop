@@ -5,7 +5,7 @@ namespace Autorization
 {
     public partial class RegistrationWindow : Window
     {
-        UserStorage UserStorage = new UserStorage();
+        private UserStorage UserStorage = new UserStorage();
         public RegistrationWindow()
         {
             InitializeComponent();

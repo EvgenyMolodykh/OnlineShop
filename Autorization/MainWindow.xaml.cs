@@ -31,9 +31,8 @@ namespace Autorization
          private void SingOut_Button_Click(object sender, RoutedEventArgs e)
         {
             userStorage.SingOut();
-            Autorized();
+            UnAuthorized();
         }
-
         private void SingIn_Button_Click(object sender, RoutedEventArgs e)
         {
             var signInWindow = new SingInWindow();
@@ -43,17 +42,25 @@ namespace Autorization
         private void Register_Button_Click(object sender, RoutedEventArgs e)
         {
             var registrationWindow = new RegistrationWindow();
-            registrationWindow.Show();
+            registrationWindow.ShowDialog();
             var singInUser = userStorage.GetSingInUser();
             if (singInUser != null)
             {
                 Autorized();
-                MessageBox.Show("Вы уже авторизованы");
-                return;
             }
-            
+            else
+            {
+                UnAuthorized();
+            }
         }
-
+        private void Autorized()
+        {
+            LoginName_Label.Visibility = Visibility.Visible;
+            PersonalDesk_Label.Visibility = Visibility.Visible;
+            SingOut_Button.Visibility = Visibility.Visible;
+            Register_Button.Visibility = Visibility.Hidden;
+            SingIn_Button.Visibility = Visibility.Hidden;
+        }
         private void UnAuthorized()
         {
             LoginName_Label.Visibility = Visibility.Hidden;
@@ -63,13 +70,6 @@ namespace Autorization
             SingIn_Button.Visibility = Visibility.Visible;
         }
 
-        private void Autorized()
-        {
-            LoginName_Label.Visibility = Visibility.Visible;
-            PersonalDesk_Label.Visibility = Visibility.Visible;
-            SingIn_Button.Visibility = Visibility.Visible;
-            Register_Button.Visibility = Visibility.Hidden;
-            SingIn_Button.Visibility = Visibility.Hidden;
-        }
+        
     }
 }
