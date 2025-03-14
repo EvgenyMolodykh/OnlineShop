@@ -22,6 +22,7 @@ namespace Autorization
             if (singInUser != null)
             {
                 Autorized();
+                
             }
             else
             {
@@ -61,6 +62,7 @@ namespace Autorization
             SingOut_Button.Visibility = Visibility.Visible;
             Register_Button.Visibility = Visibility.Hidden;
             SingIn_Button.Visibility = Visibility.Hidden;
+            showLoggedUser();
         }
         private void UnAuthorized()
         {
@@ -70,6 +72,17 @@ namespace Autorization
             Register_Button.Visibility = Visibility.Visible;
             SingIn_Button.Visibility = Visibility.Visible;
         }
+
+        public void showLoggedUser() {
+            var singInUser = userStorage.GetSingInUser();
+            if (userStorage.GetSingInUser() == null)
+            {
+                LoginName_Label.Content = string.Empty;
+            }
+            
+            LoginName_Label.Content = singInUser.Login;
+        }
+        
 
         
     }
