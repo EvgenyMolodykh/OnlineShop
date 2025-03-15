@@ -1,6 +1,6 @@
 ﻿namespace Autorization
 {
-    public class UserStorage
+    public static class UserStorage
     {
         public const string fileName = "users.json";
         private static List<User> users = GetAllUsers();
@@ -9,17 +9,16 @@
         {
             return users.FirstOrDefault(u => u.Login == login);
         }
-        public void Add(User user)
+        public static void Add(User user)
         {
             users.Add(user);
             FileProvider.Save(users, fileName);
         }
-        public User GetSingInUser()
+        public static User GetSingInUser()
         {
-          
             return users.FirstOrDefault(u => u.IsSingIn);
         }
-        public void SingOut()
+        public static void SingOut()
         {
             var singInUser = GetSingInUser();
             if (singInUser != null)

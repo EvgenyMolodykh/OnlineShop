@@ -5,8 +5,6 @@ namespace Autorization
 
     public partial class MainWindow : Window
     {
-
-        private UserStorage userStorage { get; } = new UserStorage();
         public MainWindow()
         {
             InitializeComponent();
@@ -18,11 +16,10 @@ namespace Autorization
 
         private void MainWindow_Loaded(object sender, RoutedEventArgs e)
         {
-            var singInUser = userStorage.GetSingInUser();
+            var singInUser = UserStorage.GetSingInUser();
             if (singInUser != null)
             {
                 Autorized();
-                
             }
             else
             {
@@ -31,21 +28,22 @@ namespace Autorization
         }
          private void SingOut_Button_Click(object sender, RoutedEventArgs e)
         {
-            userStorage.SingOut();
+            UserStorage.SingOut();
             UnAuthorized();
         }
         private void SingIn_Button_Click(object sender, RoutedEventArgs e)
         {
-            Autorized();
+            
             var signInWindow = new SingInWindow();
             signInWindow.ShowDialog();
+            Autorized();
         }
 
         private void Register_Button_Click(object sender, RoutedEventArgs e)
         {
             var registrationWindow = new RegistrationWindow();
             registrationWindow.ShowDialog();
-            var singInUser = userStorage.GetSingInUser();
+            var singInUser = UserStorage.GetSingInUser();
             if (singInUser != null)
             {
                 Autorized();
@@ -73,17 +71,18 @@ namespace Autorization
             SingIn_Button.Visibility = Visibility.Visible;
         }
 
-        public void showLoggedUser() {
-            var singInUser = userStorage.GetSingInUser();
-            if (userStorage.GetSingInUser() == null)
+        public void showLoggedUser() 
+        {
+            var singInUser = UserStorage.GetSingInUser();
+            if (singInUser == null|| !singInUser.IsSingIn)
             {
                 LoginName_Label.Content = string.Empty;
             }
-            
-            LoginName_Label.Content = singInUser.Login;
+            else 
+            {
+               LoginName_Label.Content = singInUser.Login;
+            }
         }
-        
-
         
     }
 }

@@ -16,10 +16,8 @@ namespace Autorization
             var login = RegLogin_TextBox.Text;
             var password = RegPassword_TextBox.Text;
             var rememberMe = RememberMe_Chebox.IsChecked;
-            var user = UserStorage.GetUser(login);
 
-            var userStorage = new UserStorage();
-            var singInUser = userStorage.GetSingInUser();
+            var singInUser = UserStorage.GetSingInUser();
             if (singInUser != null)
             {
                 MessageBox.Show("Пользователь уже авторизован");
