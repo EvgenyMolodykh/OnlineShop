@@ -72,8 +72,13 @@ namespace Autorization
         }
 
         public void showLoggedUser() 
+
         {
-            var singInUser = UserStorage.GetSingInUser();
+            var users = FileProvider.Load<List<User>>(UserStorage.fileName);
+            var singInUser = users.FirstOrDefault(u => u.IsSingIn);
+
+            var users2 = UserStorage.GetSingInUser();
+
             if (singInUser == null|| !singInUser.IsSingIn)
             {
                 LoginName_Label.Content = string.Empty;
