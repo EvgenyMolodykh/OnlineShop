@@ -74,10 +74,8 @@ namespace Autorization
         public void showLoggedUser() 
 
         {
-            var users = FileProvider.Load<List<User>>(UserStorage.fileName);
+            var users = UserStorage.GetAllUsers();
             var singInUser = users.FirstOrDefault(u => u.IsSingIn);
-
-            var users2 = UserStorage.GetSingInUser();
 
             if (singInUser == null|| !singInUser.IsSingIn)
             {

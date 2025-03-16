@@ -28,7 +28,7 @@
                 FileProvider.Save(users, fileName);
             }
         }
-        private static List<User> GetAllUsers()
+        public static List<User> GetAllUsers()
         {
             return FileProvider.Load<List<User>>(fileName) ?? new List<User>();
         }
