@@ -58,15 +58,15 @@ namespace Autorization
             LoginName_Label.Visibility = Visibility.Visible;
             PersonalDesk_Label.Visibility = Visibility.Visible;
             SingOut_Button.Visibility = Visibility.Visible;
-            Register_Button.Visibility = Visibility.Hidden;
-            SingIn_Button.Visibility = Visibility.Hidden;
+            Register_Button.Visibility = Visibility.Collapsed;
+            SingIn_Button.Visibility = Visibility.Collapsed;
             showLoggedUser();
         }
         private void UnAuthorized()
         {
-            LoginName_Label.Visibility = Visibility.Hidden;
-            PersonalDesk_Label.Visibility = Visibility.Hidden;
-            SingOut_Button.Visibility = Visibility.Hidden;
+            LoginName_Label.Visibility = Visibility.Collapsed;
+            PersonalDesk_Label.Visibility = Visibility.Collapsed;
+            SingOut_Button.Visibility = Visibility.Collapsed;
             Register_Button.Visibility = Visibility.Visible;
             SingIn_Button.Visibility = Visibility.Visible;
         }
