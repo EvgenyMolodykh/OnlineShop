@@ -1,4 +1,5 @@
 ﻿using System.Windows;
+using System.Windows.Controls;
 
 namespace Autorization
 {
@@ -12,8 +13,45 @@ namespace Autorization
             SingIn_Button.Click += SingIn_Button_Click;
             SingOut_Button.Click += SingOut_Button_Click;
             Loaded += MainWindow_Loaded;
+            
+
+            var data = new DayForecastModel() 
+            { 
+                DataTime = DateTime.Now,
+                MaxTemperature =  5,
+                MinTemperature = -2,
+            };
+            var data2 = new DayForecastModel()
+            {
+                DataTime = DateTime.Now,
+                MaxTemperature = 10,
+                MinTemperature = -5,
+            };
+
+            var data7 = new DayForecastModel()
+            {
+                DataTime = DateTime.Now,
+                MaxTemperature = 7,
+                MinTemperature = -7,
+            };
+
+            WeaterDays_ListBox.ItemsSource = new List<DayForecastModel>() {  data, data2, data2, data2, data2, data2, data7};
         }
 
+        private void WeaterDay_Button(object sender, RoutedEventArgs e)
+        {
+            if (sender is Button button) 
+            {
+
+                var day = button.DataContext as DayForecastModel;
+                if (day != null)
+                {
+                    Detals_StackPanel.DataContext = $"Дата: {day.DataTime.ToShortDateString()}, Макс.: {day.MaxTemperature}°C, Мин.: {day.MinTemperature}°C";
+                }
+                Detals_StackPanel.DataContext = day; 
+            }
+            return;
+        }
         private void MainWindow_Loaded(object sender, RoutedEventArgs e)
         {
             var singInUser = UserStorage.GetSingInUser();

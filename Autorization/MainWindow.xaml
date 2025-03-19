@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Autorization"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="550" Width="850">
     <Window.Background>
         <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
             <GradientStop Color="#FF3333" Offset="0"/>
@@ -103,61 +103,34 @@
                         <ColumnDefinition Width="1*"/>
                         <ColumnDefinition Width="1*"/>
                     </Grid.ColumnDefinitions>
-                    <StackPanel Grid.Column="0" Orientation="Vertical">
-                        <Label Content="Дата"/>
-                     </StackPanel>
+                    <StackPanel x:Name="Detals_StackPanel" Grid.Column="0" Orientation="Vertical">
+                        <Label Content="{Binding Path=DataTime}"/>
+                        <Label Content="{Binding Path=MaxTemperature}"/>
+                        <Label Content="{Binding Path=MinTemperature}"/>
+                    </StackPanel>
                 </Grid>
-                <StackPanel x:Name="WeaterDays_StackPanel" Grid.Row="1" Orientation="Horizontal">
-                    <Button Style="{StaticResource ButtonPanelButton}">
-                        <StackPanel Orientation="Vertical">
-                            <Label Content="Дата"/>
-                            <Label Content="мах темп"/>
-                            <Label Content="мин темп"/>
-                        </StackPanel>
-                    </Button>
-                    <Button Style="{StaticResource ButtonPanelButton}">
-                        <StackPanel Orientation="Vertical">
-                            <Label Content="Дата"/>
-                            <Label Content="мах темп"/>
-                            <Label Content="мин темп"/>
-                        </StackPanel>
-                    </Button>
-                    <Button Style="{StaticResource ButtonPanelButton}">
-                        <StackPanel Orientation="Vertical">
-                            <Label Content="Дата"/>
-                            <Label Content="мах темп"/>
-                            <Label Content="мин темп"/>
-                        </StackPanel>
-                    </Button>
-                    <Button Style="{StaticResource ButtonPanelButton}">
-                        <StackPanel Orientation="Vertical">
-                            <Label Content="Дата"/>
-                            <Label Content="мах темп"/>
-                            <Label Content="мин темп"/>
-                        </StackPanel>
-                    </Button>
-                    <Button Style="{StaticResource ButtonPanelButton}">
-                        <StackPanel Orientation="Vertical">
-                            <Label Content="Дата"/>
-                            <Label Content="мах темп"/>
-                            <Label Content="мин темп"/>
-                        </StackPanel>
-                    </Button>
-                    <Button Style="{StaticResource ButtonPanelButton}">
-                        <StackPanel Orientation="Vertical">
-                            <Label Content="Дата"/>
-                            <Label Content="мах темп"/>
-                            <Label Content="мин темп"/>
-                        </StackPanel>
-                    </Button>
-                    <Button Style="{StaticResource ButtonPanelButton}">
-                        <StackPanel Orientation="Vertical">
-                            <Label Content="Дата"/>
-                            <Label Content="мах темп"/>
-                            <Label Content="мин темп"/>
-                        </StackPanel>
-                    </Button>
-                </StackPanel>
+
+
+                <ListBox x:Name="WeaterDays_ListBox" Grid.Row="1">
+                    <ListBox.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <StackPanel Orientation="Horizontal"></StackPanel>
+                        </ItemsPanelTemplate>
+                    </ListBox.ItemsPanel>
+
+                    <ListBox.ItemTemplate>
+                        <DataTemplate>
+                            <Button Click="WeaterDay_Button" 
+                                Style="{StaticResource ButtonPanelButton}">
+                                <StackPanel Orientation="Vertical">
+                                    <Label Content="{Binding Path=DataTime}"/>
+                                    <Label Content="{Binding Path=MaxTemperature}"/>
+                                    <Label Content="{Binding Path=MinTemperature}"/>
+                                </StackPanel>
+                            </Button>
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
+                </ListBox>
             </Grid>
         </Grid>
 
