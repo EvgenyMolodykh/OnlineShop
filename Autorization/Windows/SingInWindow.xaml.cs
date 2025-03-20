@@ -1,4 +1,5 @@
-﻿using System.Windows;
+﻿using Autorization.Repository;
+using System.Windows;
 
 namespace Autorization
 {

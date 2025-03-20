@@ -1,4 +1,4 @@
-﻿namespace Autorization
+﻿namespace Autorization.Repository
 {
     public static class UserStorage
     {
