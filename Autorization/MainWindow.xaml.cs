@@ -37,6 +37,7 @@ namespace Autorization
             var signInWindow = new SingInWindow();
             signInWindow.ShowDialog();
             Autorized();
+
         }
 
         private void Register_Button_Click(object sender, RoutedEventArgs e)
