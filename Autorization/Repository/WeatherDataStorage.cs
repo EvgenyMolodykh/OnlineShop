@@ -25,6 +25,7 @@ namespace Autorization.Repository
                     Pressure = Math.Round(random.Next(740, 780) + random.NextDouble(), 1), 
                     WindSpeed = Math.Round(random.Next(0, 20) + random.NextDouble(), 1), 
                     WindDirection = WindDirectionStorage.GetRandomWindDirection(),
+
                 });
             }
             return dayForecastModels;
