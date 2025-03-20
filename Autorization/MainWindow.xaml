@@ -126,6 +126,8 @@
                                     <Label Content="{Binding Path=DataTime}"/>
                                     <Label Content="{Binding Path=MaxTemperature}"/>
                                     <Label Content="{Binding Path=MinTemperature}"/>
+                                    <Label Content="{Binding Path= WeekDay}"/>
+                                    <Label Content="{Binding Path=Wheather}"/>
                                 </StackPanel>
                             </Button>
                         </DataTemplate>
