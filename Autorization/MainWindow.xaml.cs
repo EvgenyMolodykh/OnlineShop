@@ -46,9 +46,9 @@ namespace Autorization
                 var day = button.DataContext as DayForecastModel;
                 if (day != null)
                 {
-                    Detals_StackPanel.DataContext = $"Дата: {day.DataTime.ToShortDateString()}, Макс.: {day.MaxTemperature}°C, Мин.: {day.MinTemperature}°C";
+                    Detals_StackPanel.DataContext = day;
                 }
-                Detals_StackPanel.DataContext = day; 
+                return;
             }
             return;
         }
