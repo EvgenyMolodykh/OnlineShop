@@ -1,4 +1,5 @@
-﻿using Autorization.Repository;
+﻿using Autorization.Models;
+using Autorization.Repository;
 using System.Windows;
 
 

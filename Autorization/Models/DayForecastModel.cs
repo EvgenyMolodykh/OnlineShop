@@ -1,5 +1,4 @@
 ﻿using Autorization.Enums;
-using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace Autorization.Models
 {

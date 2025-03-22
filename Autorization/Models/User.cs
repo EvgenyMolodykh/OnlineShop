@@ -1,4 +1,4 @@
-﻿namespace Autorization
+﻿namespace Autorization.Models
 {
     public class User
     {
@@ -9,12 +9,12 @@
 
         public bool IsSingIn { get; set; }
 
-        public User(string login, string password, string conformPassword) 
+        public User(string login, string password, string conformPassword)
         {
-            this.Id = Guid.NewGuid();
-            this.Login = login;
-            this.Password = password;
-            this.ConformPassword = conformPassword;
+            Id = Guid.NewGuid();
+            Login = login;
+            Password = password;
+            ConformPassword = conformPassword;
         }
 
     }

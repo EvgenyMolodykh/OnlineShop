@@ -5,7 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Autorization"
         mc:Ignorable="d"
-        Title="MainWindow" Height="550" Width="850">
+        Title="MainWindow" 
+        Height="550" 
+        Width="850">
     <Window.Background>
         <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
             <GradientStop Color="#FF3333" Offset="0"/>
@@ -24,9 +26,8 @@
             <Setter Property="Background" Value="LightBlue"/>
             <Setter Property="BorderBrush" Value="Black"/>
             <Setter Property="BorderThickness" Value="1.5"/>
-            
             <Setter Property="Margin" Value="4"/>
-            <Setter Property="Height" Value="90"/>
+            <Setter Property="Height" Value="Auto"/>
             <Setter Property="Width" Value="75"/>
         </Style>
         
@@ -105,8 +106,10 @@
                     </Grid.ColumnDefinitions>
                     <StackPanel x:Name="Detals_StackPanel" Grid.Column="0" Orientation="Vertical">
                         <Label Content="{Binding Path=DataTime}"/>
+                        <Label Content="{Binding Path=WeekDay}"/>
                         <Label Content="{Binding Path=MaxTemperature}"/>
                         <Label Content="{Binding Path=MinTemperature}"/>
+                        <Label Content="{Binding Path=Wheather}"/>
                     </StackPanel>
                 </Grid>
 

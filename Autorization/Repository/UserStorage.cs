@@ -1,4 +1,6 @@
-﻿namespace Autorization.Repository
+﻿using Autorization.Models;
+
+namespace Autorization.Repository
 {
     public static class UserStorage
     {
