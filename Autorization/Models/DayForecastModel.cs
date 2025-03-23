@@ -13,6 +13,8 @@ namespace Autorization.Models
         public double Pressure { get; set; }
         public double WindSpeed { get; set; }
         public WindDirection WindDirection { get; set; }
-    
+        public List<HourlyForecastModel> HourlyForecasts { get; set; }
+
+
     }
 }

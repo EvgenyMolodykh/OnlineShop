@@ -115,6 +115,28 @@
                         <Label Content="{Binding Path=WindSpeed}"/>
                         <Label Content="{Binding Path=WindDirection}"/>
                     </StackPanel>
+
+                    <ListBox x:Name="HourlyForecast_ListBox" Grid.Column="1">
+                        <ListBox.ItemsPanel>
+                            <ItemsPanelTemplate>
+                                <StackPanel Orientation="Vertical"></StackPanel>
+                            </ItemsPanelTemplate>
+                        </ListBox.ItemsPanel>
+
+                        <ListBox.ItemTemplate>
+                            <DataTemplate>
+                                <Button>
+                                    <StackPanel Orientation="Horizontal">
+                                        <Label Content="{Binding Path=Time}"/>
+                                        <Label Content="{Binding Path=ApparentTemperature}"/>
+                                        <Label Content="{Binding Path=RelativeHumidity}"/>
+                                        <Label Content="{Binding Path=WeekDay}"/>
+                                        <Label Content="{Binding Path=Wheather}"/>
+                                    </StackPanel>
+                                </Button>
+                            </DataTemplate>
+                        </ListBox.ItemTemplate>
+                    </ListBox>
                 </Grid>
 
 

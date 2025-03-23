@@ -27,6 +27,7 @@ namespace Autorization
                 if (day != null)
                 {
                     Detals_StackPanel.DataContext = day;
+                    HourlyForecast_ListBox.ItemsSource = day.HourlyForecasts;
                 }
                 return;
             }
