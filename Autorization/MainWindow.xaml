@@ -77,7 +77,7 @@
             <Button
                     Height="20"
                     Width="20">0</Button>
-            <Label Content="Weater info for current period" 
+            <Label x:Name="MonitoringPeiod_Label" 
                        Grid.Column="1" 
                        HorizontalAlignment="Center" 
                        VerticalAlignment="Center"/>
