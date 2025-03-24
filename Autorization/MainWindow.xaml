@@ -5,24 +5,135 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Autorization"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="550" Width="850">
+    <Window.Background>
+        <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
+            <GradientStop Color="#FF3333" Offset="0"/>
+            <GradientStop Color="#FF9933" Offset="1"/>
+        </LinearGradientBrush>
+    </Window.Background>
+    <Window.Resources>
+        <Style x:Key="LeftPanelButton" TargetType="Button">
+            <Setter Property="Background" Value="LightBlue"/>
+            <Setter Property="BorderBrush" Value="Black"/>
+            <Setter Property="BorderThickness" Value="1.5"/>
+            <Setter Property="Margin" Value="15"/>
+            <Setter Property="Height" Value="50" /> 
+        </Style>
+        <Style x:Key="ButtonPanelButton" TargetType="Button">
+            <Setter Property="Background" Value="LightBlue"/>
+            <Setter Property="BorderBrush" Value="Black"/>
+            <Setter Property="BorderThickness" Value="1.5"/>
+            
+            <Setter Property="Margin" Value="4"/>
+            <Setter Property="Height" Value="90"/>
+            <Setter Property="Width" Value="75"/>
+        </Style>
+        
+        
+    </Window.Resources>
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="auto" />
+            <RowDefinition Height="1*" />
             <RowDefinition Height="1*"/>
             <RowDefinition Height="10*"/>
         </Grid.RowDefinitions>
+    
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="6*"/>
             <ColumnDefinition Width="1*"/>
             <ColumnDefinition Width="2*"/>
         </Grid.ColumnDefinitions>
-        <Label x:Name="LoginName_Label" 
-            Grid.Column="0" 
-            Grid.Row="0" 
-            HorizontalAlignment="Right" 
-            VerticalAlignment="Center">
-        </Label>
+
+        <Grid Grid.Row="0" Grid.Column="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition Width="1*"/>
+            </Grid.ColumnDefinitions>
+            <Label Content="syntroptic diagnose" 
+                   Grid.Column="0" 
+                   HorizontalAlignment="Center" 
+                   VerticalAlignment="Center"/>
+            <Label Content="Wather" 
+                   Grid.Column="1" 
+                   HorizontalAlignment="Center" 
+                   VerticalAlignment="Center"/>
+            <Label x:Name="LoginName_Label" 
+                   Grid.Column="2" 
+                   Grid.Row="0" 
+                   HorizontalAlignment="Right" 
+                   VerticalAlignment="Center">
+            </Label>
+        </Grid>
+        <Grid Grid.Row="1" 
+                  Grid.Column="0" 
+                  Grid.ColumnSpan="3">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+            </Grid.ColumnDefinitions>
+            <Button
+                    Height="20"
+                    Width="20">0</Button>
+            <Label Content="Weater info for current period" 
+                       Grid.Column="1" 
+                       HorizontalAlignment="Center" 
+                       VerticalAlignment="Center"/>
+        </Grid>
+        <Grid Grid.Row="2" Grid.ColumnSpan="3">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition Width="8*"/>
+            </Grid.ColumnDefinitions>
+            <StackPanel Grid.Column="0" 
+                        Orientation="Vertical">
+                <Button Style="{StaticResource LeftPanelButton}" Content="Home"></Button>
+                <Button Style="{StaticResource LeftPanelButton}" Content="Location"></Button>
+                <Button Style="{StaticResource LeftPanelButton}" Content="Settings"></Button>
+                <Button Style="{StaticResource LeftPanelButton}" Content="Close"></Button>
+            </StackPanel>
+            <Grid Grid.Column="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="3*"/>
+                    <RowDefinition Height="1*"/>
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="1*"/>
+                    </Grid.ColumnDefinitions>
+                    <StackPanel x:Name="Detals_StackPanel" Grid.Column="0" Orientation="Vertical">
+                        <Label Content="{Binding Path=DataTime}"/>
+                        <Label Content="{Binding Path=MaxTemperature}"/>
+                        <Label Content="{Binding Path=MinTemperature}"/>
+                    </StackPanel>
+                </Grid>
+
+
+                <ListBox x:Name="WeaterDays_ListBox" Grid.Row="1">
+                    <ListBox.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <StackPanel Orientation="Horizontal"></StackPanel>
+                        </ItemsPanelTemplate>
+                    </ListBox.ItemsPanel>
+
+                    <ListBox.ItemTemplate>
+                        <DataTemplate>
+                            <Button Click="WeaterDay_Button" 
+                                Style="{StaticResource ButtonPanelButton}">
+                                <StackPanel Orientation="Vertical">
+                                    <Label Content="{Binding Path=DataTime}"/>
+                                    <Label Content="{Binding Path=MaxTemperature}"/>
+                                    <Label Content="{Binding Path=MinTemperature}"/>
+                                </StackPanel>
+                            </Button>
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
+                </ListBox>
+            </Grid>
+        </Grid>
+
         <Label x:Name="PersonalDesk_Label" 
                 Grid.Column="2" 
                 Grid.Row="0" 
@@ -37,12 +148,12 @@
         </Button>
         <Button x:Name="SingIn_Button" 
             Grid.Column="1" 
-            Grid.Row="1" 
+            Grid.Row="0" 
             Content="Войти">
         </Button>
         <Button x:Name="Register_Button" 
             Grid.Column="2" 
-            Grid.Row="1" 
+            Grid.Row="0" 
             Content="Регистрация"/>
     </Grid>
 </Window>
