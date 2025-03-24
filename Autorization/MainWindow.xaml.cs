@@ -22,15 +22,12 @@ namespace Autorization
         {
             if (sender is Button button)
             {
-
                 var day = button.DataContext as DayForecastModel;
                 if (day != null)
                 {
                     Detals_StackPanel.DataContext = day;
                 }
-                return;
             }
-            return;
         }
         private void MainWindow_Loaded(object sender, RoutedEventArgs e)
         {

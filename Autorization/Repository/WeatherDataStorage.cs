@@ -8,7 +8,7 @@ namespace Autorization.Repository
     {
         public static List<DayForecastModel> GetAll()
         {
-            List<DayForecastModel> dayForecastModels = new List<DayForecastModel>();
+            var dayForecastModels = new List<DayForecastModel>();
             var random = new Random();
             for (int i = -3; i <= 3; i++)
             {
