@@ -3,11 +3,17 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:homeView="clr-namespace:Autorization.Views.Home"
+        xmlns:vm="clr-namespace:Autorization.ViewModels.HomeModel"
         xmlns:local="clr-namespace:Autorization"
         mc:Ignorable="d"
         Title="MainWindow" 
         Height="550" 
         Width="850">
+    <Window.DataContext>
+        <local:MainWindowViewModel/>
+    </Window.DataContext>
+
     <Window.Background>
         <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
             <GradientStop Color="#FF3333" Offset="0"/>
@@ -20,7 +26,7 @@
             <Setter Property="BorderBrush" Value="Black"/>
             <Setter Property="BorderThickness" Value="1.5"/>
             <Setter Property="Margin" Value="15"/>
-            <Setter Property="Height" Value="50" /> 
+            <Setter Property="Height" Value="50" />
         </Style>
         <Style x:Key="ButtonPanelButton" TargetType="Button">
             <Setter Property="Background" Value="LightBlue"/>
@@ -30,16 +36,15 @@
             <Setter Property="Height" Value="Auto"/>
             <Setter Property="Width" Value="75"/>
         </Style>
-        
-        
     </Window.Resources>
+
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="1*" />
             <RowDefinition Height="1*"/>
             <RowDefinition Height="10*"/>
         </Grid.RowDefinitions>
-    
+
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="6*"/>
             <ColumnDefinition Width="1*"/>
@@ -95,73 +100,7 @@
                 <Button Style="{StaticResource LeftPanelButton}" Content="Close"></Button>
             </StackPanel>
             <Grid Grid.Column="1">
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="3*"/>
-                    <RowDefinition Height="1*"/>
-                </Grid.RowDefinitions>
-                <Grid Grid.Row="0">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="1*"/>
-                        <ColumnDefinition Width="1*"/>
-                    </Grid.ColumnDefinitions>
-                    <StackPanel x:Name="Detals_StackPanel" Grid.Column="0" Orientation="Vertical">
-                        <Label Content="{Binding Path=Location}"/>
-                        <Label Content="{Binding Path=Wheather}"/>
-                        <Label Content="{Binding Path=Date}"/>
-                        <Label Content="{Binding Path=WeekDay}"/>
-                        <Label Content="{Binding Path=MaxTemperature}"/>
-                        <Label Content="{Binding Path=MinTemperature}"/>
-                        <Label Content="{Binding Path=Pressure}"/>
-                        <Label Content="{Binding Path=WindSpeed}"/>
-                        <Label Content="{Binding Path=WindDirection}"/>
-                    </StackPanel>
-
-                    <ListBox x:Name="HourlyForecast_ListBox" Grid.Column="1">
-                        <ListBox.ItemsPanel>
-                            <ItemsPanelTemplate>
-                                <StackPanel Orientation="Vertical"></StackPanel>
-                            </ItemsPanelTemplate>
-                        </ListBox.ItemsPanel>
-
-                        <ListBox.ItemTemplate>
-                            <DataTemplate>
-                                <Button>
-                                    <StackPanel Orientation="Horizontal">
-                                        <Label Content="{Binding Path=Time}"/>
-                                        <Label Content="{Binding Path=ApparentTemperature}"/>
-                                        <Label Content="{Binding Path=RelativeHumidity}"/>
-                                        <Label Content="{Binding Path=WeekDay}"/>
-                                        <Label Content="{Binding Path=Wheather}"/>
-                                    </StackPanel>
-                                </Button>
-                            </DataTemplate>
-                        </ListBox.ItemTemplate>
-                    </ListBox>
-                </Grid>
-
-
-                <ListBox x:Name="WeaterDays_ListBox" Grid.Row="1">
-                    <ListBox.ItemsPanel>
-                        <ItemsPanelTemplate>
-                            <StackPanel Orientation="Horizontal"></StackPanel>
-                        </ItemsPanelTemplate>
-                    </ListBox.ItemsPanel>
-
-                    <ListBox.ItemTemplate>
-                        <DataTemplate>
-                            <Button Click="WeaterDay_Button" 
-                                Style="{StaticResource ButtonPanelButton}">
-                                <StackPanel Orientation="Vertical">
-                                    <Label Content="{Binding Path=DataTime}"/>
-                                    <Label Content="{Binding Path=MaxTemperature}"/>
-                                    <Label Content="{Binding Path=MinTemperature}"/>
-                                    <Label Content="{Binding Path=WeekDay}"/>
-                                    <Label Content="{Binding Path=Wheather}"/>
-                                </StackPanel>
-                            </Button>
-                        </DataTemplate>
-                    </ListBox.ItemTemplate>
-                </ListBox>
+                <homeView:HomeView DataContext="{Binding HomeViewModel}"/>
             </Grid>
         </Grid>
 

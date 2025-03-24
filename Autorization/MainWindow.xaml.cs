@@ -15,7 +15,7 @@ namespace Autorization
             SingIn_Button.Click += SingIn_Button_Click;
             SingOut_Button.Click += SingOut_Button_Click;
             Loaded += MainWindow_Loaded;
-            WeaterDays_ListBox.ItemsSource = WeatherDataStorage.GetAll();
+            //WeaterDays_ListBox.ItemsSource = WeatherDataStorage.GetAll();
         }
 
         private void WeaterDay_Button(object sender, RoutedEventArgs e)
@@ -26,8 +26,8 @@ namespace Autorization
                 var day = button.DataContext as DayForecastModel;
                 if (day != null)
                 {
-                    Detals_StackPanel.DataContext = day;
-                    HourlyForecast_ListBox.ItemsSource = day.HourlyForecasts;
+                    //Detals_StackPanel.DataContext = day;
+                    //HourlyForecast_ListBox.ItemsSource = day.HourlyForecasts;
                     MonitoringPeiod_Label.Content = $"Weather for cast {day.DataTime.AddDays(-3).ToString("dd MMMM")} - {day.DataTime.AddDays(+3).ToString("dd MMMM")}";
                 }
                 return;
