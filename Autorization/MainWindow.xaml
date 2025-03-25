@@ -116,27 +116,33 @@
                         <Label Content="{Binding Path=WindDirection}"/>
                     </StackPanel>
 
-                    <ListBox x:Name="HourlyForecast_ListBox" Grid.Column="1">
-                        <ListBox.ItemsPanel>
-                            <ItemsPanelTemplate>
-                                <StackPanel Orientation="Vertical"></StackPanel>
-                            </ItemsPanelTemplate>
-                        </ListBox.ItemsPanel>
+                    <Grid Grid.Column="1">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="1*"/>
+                            <RowDefinition Height="10*"/>
+                        </Grid.RowDefinitions>
 
-                        <ListBox.ItemTemplate>
-                            <DataTemplate>
-                                <Button>
-                                    <StackPanel Orientation="Horizontal">
-                                        <Label Content="{Binding Path=Time}"/>
-                                        <Label Content="{Binding Path=ApparentTemperature}"/>
-                                        <Label Content="{Binding Path=RelativeHumidity}"/>
-                                        <Label Content="{Binding Path=WeekDay}"/>
-                                        <Label Content="{Binding Path=Wheather}"/>
-                                    </StackPanel>
-                                </Button>
-                            </DataTemplate>
-                        </ListBox.ItemTemplate>
-                    </ListBox>
+
+                        <DataGrid x:Name="HourlyForecast_DataGrid" AutoGenerateColumns="False">
+                            <DataGrid.Columns>
+                                <DataGridTextColumn Header="Time"/>
+                                <DataGridTextColumn Header="°C" />
+                                <DataGridTextColumn Header="Apparent" />
+                                <DataGridTextColumn Header="Wind Speed"/>
+                                <DataGridTextColumn Header="Wind Direction"/>
+                            </DataGrid.Columns>
+                        </DataGrid>
+                        <!--Вставить погоду-->
+                        <ListBox x:Name="HourlyForecast_ListBox" Grid.Row="1">
+                            <ListBox.ItemsPanel>
+                                <ItemsPanelTemplate>
+                                    <StackPanel Orientation="Vertical"></StackPanel>
+                                </ItemsPanelTemplate>
+                            </ListBox.ItemsPanel>
+                        </ListBox>
+
+
+                    </Grid>
                 </Grid>
 
 
