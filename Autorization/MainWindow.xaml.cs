@@ -17,12 +17,10 @@ namespace Autorization
             Loaded += MainWindow_Loaded;
             //WeaterDays_ListBox.ItemsSource = WeatherDataStorage.GetAll();
         }
-
         private void WeaterDay_Button(object sender, RoutedEventArgs e)
         {
             if (sender is Button button)
             {
-
                 var day = button.DataContext as DayForecastModel;
                 if (day != null)
                 {
@@ -31,8 +29,8 @@ namespace Autorization
                     MonitoringPeiod_Label.Content = $"Weather for cast {day.DataTime.AddDays(-3).ToString("dd MMMM")} - {day.DataTime.AddDays(+3).ToString("dd MMMM")}";
                 }
                 return;
+
             }
-            return;
         }
         private void MainWindow_Loaded(object sender, RoutedEventArgs e)
         {
@@ -57,6 +55,7 @@ namespace Autorization
             var signInWindow = new SingInWindow();
             signInWindow.ShowDialog();
             Autorized();
+
         }
 
         private void Register_Button_Click(object sender, RoutedEventArgs e)
@@ -80,7 +79,7 @@ namespace Autorization
             SingOut_Button.Visibility = Visibility.Visible;
             Register_Button.Visibility = Visibility.Collapsed;
             SingIn_Button.Visibility = Visibility.Collapsed;
-            showLoggedUser();
+            ShowLoggedUser();
         }
         private void UnAuthorized()
         {
@@ -90,8 +89,7 @@ namespace Autorization
             Register_Button.Visibility = Visibility.Visible;
             SingIn_Button.Visibility = Visibility.Visible;
         }
-        public void showLoggedUser()
-
+        public void ShowLoggedUser()
         {
             var users = UserStorage.GetAllUsers();
             var singInUser = users.FirstOrDefault(u => u.IsSingIn);
