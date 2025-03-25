@@ -26,7 +26,8 @@ namespace Autorization
                 {
                     Detals_StackPanel.DataContext = day;
 
-                    HourlyForecast_ListBox.ItemsSource = day.HourlyForecasts;
+                    //HourlyForecast_ListBox.ItemsSource = day.HourlyForecasts;
+                    HourlyForecast_DataGrid.ItemsSource = day.HourlyForecasts;
                 }
                 return;
 

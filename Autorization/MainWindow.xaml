@@ -116,33 +116,18 @@
                         <Label Content="{Binding Path=WindDirection}"/>
                     </StackPanel>
 
-                    <Grid Grid.Column="1">
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="1*"/>
-                            <RowDefinition Height="10*"/>
-                        </Grid.RowDefinitions>
 
-
-                        <DataGrid x:Name="HourlyForecast_DataGrid" AutoGenerateColumns="False">
-                            <DataGrid.Columns>
-                                <DataGridTextColumn Header="Time"/>
-                                <DataGridTextColumn Header="°C" />
-                                <DataGridTextColumn Header="Apparent" />
-                                <DataGridTextColumn Header="Wind Speed"/>
-                                <DataGridTextColumn Header="Wind Direction"/>
-                            </DataGrid.Columns>
-                        </DataGrid>
-                        <!--Вставить погоду-->
-                        <ListBox x:Name="HourlyForecast_ListBox" Grid.Row="1">
-                            <ListBox.ItemsPanel>
-                                <ItemsPanelTemplate>
-                                    <StackPanel Orientation="Vertical"></StackPanel>
-                                </ItemsPanelTemplate>
-                            </ListBox.ItemsPanel>
-                        </ListBox>
-
-
-                    </Grid>
+                    <DataGrid x:Name="HourlyForecast_DataGrid" AutoGenerateColumns="False" Grid.Column="1">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="Time" Binding="{Binding Time, StringFormat='HH:mm'}"/>
+                            <DataGridTextColumn Header="°C" Binding="{Binding Temperature}" Width="*" />
+                            <DataGridTextColumn Header="Cloudiness"/>
+                            <DataGridTextColumn Header="Apparent" Binding="{Binding ApparentTemperature}" Width="*" />
+                            <DataGridTextColumn Header="Humidity" Binding="{Binding RelativeHumidity}" Width="*" />
+                            <DataGridTextColumn Header="Pressure" Binding="{Binding SurfasePressure}" Width="*" />
+                            <DataGridTextColumn Header="Wind" Binding="{Binding WindDirection}" Width="*" />
+                        </DataGrid.Columns>
+                    </DataGrid>
                 </Grid>
 
 
