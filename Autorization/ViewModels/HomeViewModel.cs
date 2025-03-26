@@ -2,7 +2,7 @@
 
 namespace Autorization.ViewModels
 {
-    public class HomeModel : INotifyPropertyChanged
+    public class HomeViewModel : INotifyPropertyChanged
     {
         public event PropertyChangedEventHandler? PropertyChanged;
     }

@@ -1,4 +1,5 @@
-﻿using System.ComponentModel;
+﻿using Autorization.Views.Home;
+using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using System.Windows.Input;
 
@@ -19,10 +20,9 @@ namespace Autorization.ViewModels
                 OnPropertyChanged();
             }
         }
-        MainWindowViewModel()
+        public MainWindowViewModel()
         {
             HomeCommand = new RelayCommand(OpenHomeView, CanOpenHomeView);
-            
         }
 
         private bool CanOpenHomeView(object arg)
