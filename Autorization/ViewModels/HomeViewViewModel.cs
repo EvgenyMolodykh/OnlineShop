@@ -29,7 +29,6 @@ namespace WeatherAppWPF.ViewModels
             }
         }
 
-
         public HomeViewViewModel()
         {
             ForecastsDays = WeatherDataStorage.GetAll();

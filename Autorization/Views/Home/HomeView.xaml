@@ -60,7 +60,7 @@
 
                     <ListBox.ItemTemplate>
                         <DataTemplate>
-                            <Button>
+                            
                                 <!--Style="{StaticResource ButtonPanelButton}" вставить ресурсы -->
                                 <StackPanel Orientation="Vertical">
                                     <Label Content="{Binding Path=DataTime}"/>
@@ -69,7 +69,7 @@
                                     <Label Content="{Binding Path=WeekDay}"/>
                                     <Label Content="{Binding Path=Wheather}"/>
                                 </StackPanel>
-                            </Button>
+                           
                         </DataTemplate>
                     </ListBox.ItemTemplate>
                 </ListBox>
