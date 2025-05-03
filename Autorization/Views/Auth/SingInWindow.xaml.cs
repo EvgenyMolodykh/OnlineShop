@@ -1,8 +1,8 @@
-﻿using Autorization.Models;
-using Autorization.Repository;
+﻿using WeatherAppWPF.Models;
+using WeatherAppWPF.Repository;
 using System.Windows;
 
-namespace Autorization
+namespace WeatherAppWPF
 {
     public partial class SingInWindow : Window
     {

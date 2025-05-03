@@ -1,9 +1,9 @@
-﻿using Autorization.Models;
-using Autorization.Repository;
+﻿using WeatherAppWPF.Models;
+using WeatherAppWPF.Repository;
 using System.Windows;
 using System.Windows.Controls;
 
-namespace Autorization
+namespace WeatherAppWPF
 {
 
     public partial class MainWindow : Window
@@ -103,5 +103,6 @@ namespace Autorization
                 LoginName_Label.Content = singInUser.Login;
             }
         }
+
     }
 }

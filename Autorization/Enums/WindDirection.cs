@@ -1,4 +1,4 @@
-﻿namespace Autorization.Enums
+﻿namespace WeatherAppWPF.Enums
 {
     public enum WindDirection
     {

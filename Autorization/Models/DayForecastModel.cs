@@ -1,6 +1,6 @@
-﻿using Autorization.Enums;
+﻿using WeatherAppWPF.Enums;
 
-namespace Autorization.Models
+namespace WeatherAppWPF.Models
 {
     public class DayForecastModel
     {

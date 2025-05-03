@@ -2,7 +2,7 @@
 using System.Data;
 using System.Windows;
 
-namespace Autorization
+namespace WeatherAppWPF
 {
     /// <summary>
     /// Interaction logic for App.xaml

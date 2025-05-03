@@ -1,18 +1,18 @@
-﻿using Autorization.Views.Home;
+﻿using WeatherAppWPF.Views.Home;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using System.Windows.Input;
 
-namespace Autorization.ViewModels
+namespace WeatherAppWPF.ViewModels
 {
     public partial class MainWindowViewModel : INotifyPropertyChanged
     {
         public event PropertyChangedEventHandler? PropertyChanged;
         public ICommand? HomeCommand { get; set; }
 
-        private HomeView homeViewModel;
+        private HomeViewViewModel homeViewModel;
 
-        public HomeView HomeViewModel
+        public HomeViewViewModel HomeViewModel
         {
             get { return homeViewModel; }
             set { 
@@ -32,7 +32,7 @@ namespace Autorization.ViewModels
 
         private void OpenHomeView(object obj)
         {
-            HomeViewModel = new HomeView();
+            HomeViewModel = new HomeViewViewModel();
         }
 
         public void OnPropertyChanged([CallerMemberName] string prop = "")

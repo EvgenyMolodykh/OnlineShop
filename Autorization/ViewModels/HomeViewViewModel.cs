@@ -1,25 +1,36 @@
-﻿using Autorization.Models;
-using Autorization.Repository;
+﻿using WeatherAppWPF.Models;
+using WeatherAppWPF.Repository;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 
-namespace Autorization.ViewModels
+namespace WeatherAppWPF.ViewModels
 {
-    public class HomeViewModel : INotifyPropertyChanged
+    public class HomeViewViewModel : INotifyPropertyChanged
     {
         private List<DayForecastModel> forecastsDays;
 
         public List<DayForecastModel> ForecastsDays
         {
-            get { return forecastsDays; }
+            get => forecastsDays; 
             set
             {
                 forecastsDays = value;
                 OnPropertyChanged();
             }
         }
+        private DayForecastModel selectedDay;
+        public DayForecastModel SelectedDay
+        {
+            get => selectedDay;
+            set
+            {
+                selectedDay = value;
+                OnPropertyChanged();
+            }
+        }
 
-        public HomeViewModel()
+
+        public HomeViewViewModel()
         {
             ForecastsDays = WeatherDataStorage.GetAll();
         }

@@ -1,4 +1,4 @@
-﻿namespace Autorization.Models
+﻿namespace WeatherAppWPF.Models
 {
     public class HourlyForecastModel
     {

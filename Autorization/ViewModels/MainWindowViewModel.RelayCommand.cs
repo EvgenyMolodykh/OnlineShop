@@ -1,6 +1,6 @@
 ﻿using System.Windows.Input;
 
-namespace Autorization.ViewModels
+namespace WeatherAppWPF.ViewModels
 {
     public partial class MainWindowViewModel
     {

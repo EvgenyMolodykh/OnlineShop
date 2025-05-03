@@ -1,6 +1,6 @@
-﻿using Autorization.Models;
+﻿using WeatherAppWPF.Models;
 
-namespace Autorization.Repository
+namespace WeatherAppWPF.Repository
 {
     public static class UserStorage
     {

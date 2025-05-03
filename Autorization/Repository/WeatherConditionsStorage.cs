@@ -1,4 +1,4 @@
-﻿namespace Autorization.Repository
+﻿namespace WeatherAppWPF.Repository
 {
     public class WeatherConditionsStorage
     {

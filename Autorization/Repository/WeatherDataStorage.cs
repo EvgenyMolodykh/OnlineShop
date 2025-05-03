@@ -1,8 +1,8 @@
-﻿using Autorization.Enums;
-using Autorization.Models;
+﻿using WeatherAppWPF.Enums;
+using WeatherAppWPF.Models;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 
-namespace Autorization.Repository
+namespace WeatherAppWPF.Repository
 {
     public class WeatherDataStorage
     {
