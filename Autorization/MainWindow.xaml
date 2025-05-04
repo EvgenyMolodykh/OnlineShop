@@ -8,8 +8,8 @@
         Height="550" 
         Width="850"
         xmlns:vm="clr-namespace:WeatherAppWPF.ViewModels"
-        xmlns:homeView="clr-namespace:WeatherAppWPF.Views.Home">
-
+        xmlns:homeView="clr-namespace:WeatherAppWPF.Views.Home" 
+        xmlns:locationView="clr-namespace:WeatherAppWPF.Views.Location">
     <Window.DataContext>
         <vm:MainWindowViewModel/>
     </Window.DataContext>
@@ -94,16 +94,23 @@
             </Grid.ColumnDefinitions>
             <StackPanel Grid.Column="0" 
                         Orientation="Vertical">
+                
                 <Button Style="{StaticResource LeftPanelButton}" 
                         Content="Home"
                         Command="{Binding HomeCommand}">
                 </Button>
-                <Button Style="{StaticResource LeftPanelButton}" Content="Location"></Button>
+
+                <Button Style="{StaticResource LeftPanelButton}" 
+                        Content="Location"
+                        Command="{Binding Path=LocationCommand}">
+                </Button>
+                
                 <Button Style="{StaticResource LeftPanelButton}" Content="Settings"></Button>
                 <Button Style="{StaticResource LeftPanelButton}" Content="Close"></Button>
             </StackPanel>
             <Grid Grid.Column="1">
                 <homeView:HomeView DataContext="{Binding HomeViewModel}"/>
+                <locationView:LocationView DataContext="{Binding LocationViewViewModel}"/>
             </Grid>
         </Grid>
 

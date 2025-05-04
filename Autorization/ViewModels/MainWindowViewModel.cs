@@ -2,6 +2,7 @@
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using System.Windows.Input;
+using WeatherAppWPF.Views.Location;
 
 namespace WeatherAppWPF.ViewModels
 {
@@ -9,6 +10,7 @@ namespace WeatherAppWPF.ViewModels
     {
         public event PropertyChangedEventHandler? PropertyChanged;
         public ICommand? HomeCommand { get; set; }
+        public ICommand? LocationCommand { get; set; }
 
         private HomeViewViewModel homeViewModel;
 
@@ -20,10 +22,40 @@ namespace WeatherAppWPF.ViewModels
                 OnPropertyChanged();
             }
         }
+
+
+        private LocationViewViewModel locationViewViewModel;
+
+        public LocationViewViewModel LocationViewViewModel
+        {
+            get { return locationViewViewModel; }
+            set
+            {
+                locationViewViewModel = value;
+                OnPropertyChanged();
+            }
+        }
+
+
         public MainWindowViewModel()
         {
             HomeCommand = new RelayCommand(OpenHomeView, CanOpenHomeView);
+            LocationCommand = new RelayCommand(OpenLocationView, CanOpenLocationView);
         }
+
+
+
+        private bool CanOpenLocationView(object arg)
+        {
+            return true;
+        }
+
+        private void OpenLocationView(object obj)
+        {
+            LocationViewViewModel = new LocationViewViewModel();
+        }
+
+
 
         private bool CanOpenHomeView(object arg)
         {
