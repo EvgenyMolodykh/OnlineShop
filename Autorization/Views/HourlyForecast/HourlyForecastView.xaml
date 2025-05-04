@@ -55,13 +55,13 @@
                                 <ColumnDefinition Width="*"/>
                                 <ColumnDefinition Width="*"/>
                             </Grid.ColumnDefinitions>
-                            <TextBlock Grid.Column = "0" Text = "{Binding Path=Time}" FontWeight = "Bold" HorizontalAlignment = "Center" />
-                            <TextBlock Grid.Column = "1" Text = "{Binding Path=Temperature}" FontWeight = "Bold"  HorizontalAlignment = "Center" />
-                            <TextBlock Grid.Column = "2" Text = "{Binding Path=ApparentTemperature}" FontWeight = "Bold" HorizontalAlignment = "Center" />
-                            <TextBlock Grid.Column = "3" Text = "{Binding Path=RelativeHumidity}" FontWeight = "Bold" HorizontalAlignment = "Center" />
-                            <TextBlock Grid.Column = "4" Text = "{Binding Path=WindDirection}" FontWeight = "Bold" HorizontalAlignment = "Center" />
-                            <TextBlock Grid.Column = "5" Text = "{Binding Path=WindSpeed}" FontWeight = "Bold" HorizontalAlignment = "Center" />
-                            <TextBlock Grid.Column = "6" Text = "{Binding Path=Weather}" FontWeight = "Bold" HorizontalAlignment = "Center" />
+                            <TextBlock Grid.Column="0" Text="{Binding Path=Time, StringFormat={}{0:HH:mm}}" HorizontalAlignment="Center"/>
+                            <TextBlock Grid.Column = "1" Text = "{Binding Path=Temperature}" HorizontalAlignment="Center"/>
+                            <TextBlock Grid.Column = "2" Text = "{Binding Path=ApparentTemperature}" HorizontalAlignment="Center"/>
+                            <TextBlock Grid.Column = "3" Text = "{Binding Path=RelativeHumidity}" HorizontalAlignment="Center"/>
+                            <TextBlock Grid.Column = "4" Text = "{Binding Path=WindDirection}" HorizontalAlignment = "Center"/>
+                            <TextBlock Grid.Column = "5" Text = "{Binding Path=WindSpeed}" HorizontalAlignment = "Center"/>
+                            <TextBlock Grid.Column = "6" Text = "{Binding Path=Weather}" HorizontalAlignment = "Center"/>
                         </Grid>
                     </DataTemplate>
                 </ItemsControl.ItemTemplate>
