@@ -1,0 +1,47 @@
+﻿@using OnlineShopWebApp.Areas.Admin.Models
+@model RegisterViewModel
+<link rel="stylesheet" href="~/css/register.css">
+
+
+<div class="login-container">
+    <h3 class="text-center">Регистрация пользователя</h3>
+    <div class="validation text-danger" asp-validation-summary="ModelOnly"></div>
+    <form method="post">
+        <div class="form-group">
+            <label asp-for="Name">Логин</label>
+            <br />
+            <input asp-for="Name" class="form-control" placeholder="Введите логин" required>
+            <span asp-validation-for="Name" class="text-danger"></span>
+        </div>
+        <br />
+        <div class="form-group">
+            <label asp-for="Password">Пароль</label>
+            <br />
+            <input type="password" asp-for="Password" class="form-control" placeholder="Введите пароль" required>
+            <span asp-validation-for="Password" class="text-danger"></span>
+        </div>
+        <br />
+        <label asp-for="ConfirmPassword">Подтвердите пароль</label>
+        <br />
+        <input type="password" asp-for="ConfirmPassword" class="form-control" placeholder="Подтвердите пароль" required>
+        <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+        <br />
+        <div class="form-group">
+            <label asp-for="Email">Почта</label>
+            <br />
+            <input asp-for="Email" class="form-control" placeholder="Введите почту" required>
+            <span asp-validation-for="Email" class="text-danger"></span>
+        </div>
+        <br />
+        <div class="form-group">
+            <label asp-for="Phone">Телефон</label>
+            <br />
+            <input asp-for="Phone" class="form-control" placeholder="Введите телефон" required>
+            <span asp-validation-for="Phone" class="text-danger"></span>
+        </div>
+        <br />
+        <div class="text-center">
+            <button type="submit" class="btn btn-success" asp-area="" asp-controller="Account" asp-action="Register">Зарегистрироваться</button>
+        </div>
+    </form>
+</div>

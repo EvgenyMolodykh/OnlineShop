@@ -1,0 +1,42 @@
+﻿@model UserDelivetyInfo
+
+<form method="post">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="text-center">
+                <div class="form-group">
+                    <label asp-for="Name">Введите ФИО</label>
+                    <div class="input-group justify-content-center" style="max-width: 300px; margin: 0 auto;">
+                        <input asp-for="Name" class="form-control" placeholder="Введите имя" required>
+                    </div>
+                    <span asp-validation-for="Name" class="text-danger"></span>
+                </div>
+
+                <br />
+
+                <div class="form-group">
+                    <label asp-for="Address">Введите адрес доставки</label>
+                    <div class="input-group justify-content-center" style="max-width: 300px; margin: 0 auto;">
+                        <input asp-for="Address" class="form-control" placeholder="Введите адрес доставки" required>
+                    </div>
+                    <span asp-validation-for="Address" class="text-danger"></span>
+                </div>
+
+                <br />
+
+                <div class="form-group">
+                    <label asp-for="Phone">Введите телефон</label>
+                    <div class="input-group justify-content-center" style="max-width: 300px; margin: 0 auto;">
+                        <input asp-for="Phone" class="form-control" placeholder="Введите телефон" required>
+                    </div>
+                    <span asp-validation-for="Phone" class="text-danger"></span>
+                </div>
+
+                <br />
+
+                <button type="submit" class="btn btn-success" asp-controller="Order" asp-action="Buy">Оформить заказ</button>
+            </div>
+
+        </div>
+    </div>
+</form>

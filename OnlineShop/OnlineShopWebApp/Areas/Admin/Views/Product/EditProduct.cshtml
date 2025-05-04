@@ -1,0 +1,31 @@
+﻿@model ProductViewModel
+
+<h3>Редактирование продукта</h3>
+<br />
+<form method="post">
+    <input type="hidden" name="Id" value="@Model?.Id"/>
+    <div class="form-group">
+        <label asp-for="Name">Имя продукта</label>
+        <br />
+        <input asp-for="Name" class="form-control" value="@Model.Name" required>
+        <span asp-validation-for="Name"></span>
+    </div>
+    <br/>
+    <div class="form-group">
+        <label asp-for="Description">Описание продукта</label>
+        <br />
+        <input asp-for="Description" class="form-control" value="@Model.Description" required>
+        <span asp-validation-for="Description"></span>
+    </div>
+    <br />
+    <div class="form-group">
+        <label asp-for="Cost">Цена продукта</label>
+        <br />
+        <input asp-for="Cost" class="form-control" value="@Model.Cost" required>
+        <span asp-validation-for="Cost"></span>
+    </div>
+    <br />
+    <div class="text-center">
+        <button type="submit" class="btn btn-success" asp-area="Admin" asp-controller="Product" asp-action="EditProduct">Редактировать товар</button>
+    </div>
+</form>

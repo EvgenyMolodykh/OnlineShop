@@ -1,0 +1,44 @@
+﻿@using OnlineShopWebApp.Enums
+@model OrderViewModel
+
+<form method="post">
+	<div class="row">
+		<div class="col-3">
+			@await Html.PartialAsync("AdminLeftPanel")
+		</div>
+
+		<div class="col-9">
+			<h3>Заказ @Model.CurrentNumberOrder</h3>
+
+			<hr />
+			<br>
+			<table>
+				<tr>
+					<td>Дата и время</td>
+					<td>@Model.CreateDateTime.ToString("g")</td>
+				</tr>
+				<tr>
+					<td>Получатель</td>
+					<td>@Model.User.Name</td>
+				</tr>
+				<tr>
+					<td>Сумма заказа</td>
+					<td>@Model.CostOrders</td>
+				</tr>
+				<tr>
+					<td>Получатель</td>
+					<td>@Model.User.Phone</td>
+				</tr>
+				<tr>
+					<td>Статус заказа</td>
+					<td>
+						<select asp-for="Status" asp-items="@Html.GetEnumSelectList<OrderStatus>()"></select>
+					</td>
+				</tr>
+			</table>
+			<div class="col-12">
+				<button class="btn btn-success" type="submit" asp-area="Admin" asp-controller="Order" asp-action="UpdateOrderStatus" asp-route-orderId="@Model.Id">Обновить статус</button>
+			</div>
+		</div>
+	</div>
+</form>

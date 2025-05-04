@@ -1,0 +1,47 @@
+﻿@model List<UserAccount>
+
+<div class="row">
+	<div class="col-3">
+		@await Html.PartialAsync("AdminLeftPanel")
+	</div>
+
+	<div class="col-9">
+		<h3>Список пользователей</h3>
+        <div class="row">
+            <div class="col">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th>Email(Логин)</th>
+                            <th>Имя</th>
+                            <th>Фамилия</th>
+                            <th>Телефон</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @for (int i = 0; i < Model.Count; i++)
+                        {
+                            <tr>
+                                <td>@(i + 1)</td>
+                                <td>@Model[i].Email</td>
+                                <td>@Model[i].Name</td>
+                                <td>@Model[i].LastName</td>
+                                <td>@Model[i].Phone</td>
+                                <td>
+                                    <a class="btn btn-success text-dark"
+                                        asp-area="Admin" 
+                                        asp-controller="User"
+                                        asp-action="Details"
+                                        asp-route-name="@Model[i].Name">Подробнее</a>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+	</div>
+    <br />
+</div>

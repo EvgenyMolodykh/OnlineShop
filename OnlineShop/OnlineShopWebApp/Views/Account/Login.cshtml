@@ -1,0 +1,39 @@
+﻿@using OnlineShopWebApp.Areas.Admin.Models
+
+@model LoginViewModel
+<link rel="stylesheet" href="~/css/login.css">
+
+<div class="login-container">
+    
+    <h3 class="text-center">Вход</h3>
+    <div class="text-danger font-weight-bold" asp-validation-summary="ModelOnly"></div>
+    <form method="post">
+        <div class="form-group">
+            <label asp-for="UserName">Логин</label>
+            <br/>
+            <input asp-for="UserName" class="form-control" placeholder="Введите логин" required>
+            <span asp-validation-for="UserName"></span>
+        </div>
+        <br />
+        <div class="form-group">
+            <label asp-for="Password">Пароль</label>
+            <br />
+            <input type="password" asp-for="Password" class="form-control" placeholder="Введите пароль" required>
+            <span asp-validation-for="Password"></span>
+        </div>
+        <br />
+        <div class="form-check form-check-inline">
+            <label class="form-check-label">Запомнить меня</label>
+            <input type="checkbox" class="form-check-input" name="RememberMe" value="true">
+            
+        </div>
+
+        <div class="text-center">
+            <button type="submit" class="btn btn-success" asp-area="" asp-controller="Account" asp-action="Login">Войдите</button>
+        </div>
+    </form>
+
+    <div style="display: flex; justify-content: center;">
+        <a class="text-center text-muted mt-3" asp-area="" asp-controller="Account" asp-action="Register">Регистрация нового пользователя</a>
+    </div>
+</div>

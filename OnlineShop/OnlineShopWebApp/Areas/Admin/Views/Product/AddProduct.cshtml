@@ -1,0 +1,30 @@
+﻿@model ProductViewModel 
+
+<h3>Создание нового продукта</h3>
+<br />
+<form method="post">
+    <div class="form-group">
+        <label asp-for="Name">Введите имя продукта</label>
+        <br />
+        <input asp-for="Name" class="form-control" placeholder="Введите имя продукта" required>
+        <span asp-validation-for="Name"></span>
+    </div>
+    <br />
+    <div class="form-group">
+        <label asp-for="Description">Введите описание продукта</label>
+        <br />
+        <input asp-for="Description" class="form-control" placeholder="Введите описание продукта" required>
+        <span asp-validation-for="Description"></span>
+    </div>
+    <br />
+    <div class="form-group">
+        <label asp-for="Cost">Введите цену продукта</label>
+        <br />
+        <input asp-for="Cost" class="form-control" placeholder="Введите цену продукта" required>
+        <span asp-validation-for="Cost"></span>
+    </div>
+    <br />
+    <div class="text-center">
+        <button type="submit" class="btn btn-success" asp-area="Admin" asp-controller="Product" asp-action="AddProduct">Добавить продукт в каталог</button>
+    </div>
+</form>
