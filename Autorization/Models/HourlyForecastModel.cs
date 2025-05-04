@@ -1,4 +1,8 @@
-﻿namespace WeatherAppWPF.Models
+﻿using static System.Net.Mime.MediaTypeNames;
+using System.Windows.Controls;
+using System.Windows;
+
+namespace WeatherAppWPF.Models
 {
     public class HourlyForecastModel
     {

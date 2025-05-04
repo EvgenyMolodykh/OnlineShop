@@ -7,25 +7,66 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
-        <ListBox x:Name="HourlyForecast_ListBox" Grid.Column="1"
-                 ItemsSource="{Binding HourlyForecasts}">
-            <ListBox.ItemsPanel>
-                <ItemsPanelTemplate>
-                    <StackPanel Orientation="Vertical"></StackPanel>
-                </ItemsPanelTemplate>
-            </ListBox.ItemsPanel>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+  
+        <Border Grid.Row="0" Grid.Column="0"
+                BorderBrush="Green"
+                Background="AliceBlue">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <TextBlock Grid.Column="0" Text="Time" FontWeight="Bold" HorizontalAlignment="Center"/>
+                <TextBlock Grid.Column="1" Text="Temp" FontWeight="Bold"  HorizontalAlignment="Center"/>
+                <TextBlock Grid.Column="2" Text="Press" FontWeight="Bold" HorizontalAlignment="Center"/>
+                <TextBlock Grid.Column="3" Text="Hum" FontWeight="Bold" HorizontalAlignment="Center"/>
+                <TextBlock Grid.Column="4" Text="Direct" FontWeight="Bold" HorizontalAlignment="Center"/>
+                <TextBlock Grid.Column="5" Text="Speed" FontWeight="Bold" HorizontalAlignment="Center"/>
+                <TextBlock Grid.Column="6" Text="Wather" FontWeight="Bold" HorizontalAlignment="Center"/>
+            </Grid>
+        </Border>
 
-            <ListBox.ItemTemplate>
-                <DataTemplate>
-                    <StackPanel Orientation="Horizontal">
-                        <Label Content="{Binding Path=Time}"/>
-                        <Label Content="{Binding Path=ApparentTemperature}"/>
-                        <Label Content="{Binding Path=RelativeHumidity}"/>
-                        <Label Content="{Binding Path=WeekDay}"/>
-                        <Label Content="{Binding Path=Wheather}"/>
-                    </StackPanel>
-                </DataTemplate>
-            </ListBox.ItemTemplate>
-        </ListBox>
+        <ScrollViewer Grid.Row="1" Grid.Column="1">
+            <ItemsControl ItemsSource="{Binding Path=HourlyForecasts}" Margin="1,0">
+                <ItemsControl.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <StackPanel />
+                    </ItemsPanelTemplate>
+                </ItemsControl.ItemsPanel>
+
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <TextBlock Grid.Column = "0" Text = "{Binding Path=Time}" FontWeight = "Bold" HorizontalAlignment = "Center" />
+                            <TextBlock Grid.Column = "1" Text = "{Binding Path=Temperature}" FontWeight = "Bold"  HorizontalAlignment = "Center" />
+                            <TextBlock Grid.Column = "2" Text = "{Binding Path=ApparentTemperature}" FontWeight = "Bold" HorizontalAlignment = "Center" />
+                            <TextBlock Grid.Column = "3" Text = "{Binding Path=RelativeHumidity}" FontWeight = "Bold" HorizontalAlignment = "Center" />
+                            <TextBlock Grid.Column = "4" Text = "{Binding Path=WindDirection}" FontWeight = "Bold" HorizontalAlignment = "Center" />
+                            <TextBlock Grid.Column = "5" Text = "{Binding Path=WindSpeed}" FontWeight = "Bold" HorizontalAlignment = "Center" />
+                            <TextBlock Grid.Column = "6" Text = "{Binding Path=Weather}" FontWeight = "Bold" HorizontalAlignment = "Center" />
+                        </Grid>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
+        </ScrollViewer>
+
     </Grid>
 </UserControl>
