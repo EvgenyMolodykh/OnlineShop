@@ -68,7 +68,7 @@
               "RelativeDocumentMoniker": "OnlineShopWebApp\\Views\\Shared\\Footer.cshtml",
               "ToolTip": "C:\\Users\\ololo\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\OnlineShpoASP\\OnlineShop\\OnlineShopWebApp\\Views\\Shared\\Footer.cshtml",
               "RelativeToolTip": "OnlineShopWebApp\\Views\\Shared\\Footer.cshtml",
-              "ViewState": "AgIAABYAAAAAAAAAAAAcwDoAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAC8AAAAAAAAAAAAcwFEAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-05-05T12:53:56.459Z",
               "EditorCaption": ""
@@ -83,8 +83,7 @@
               "RelativeToolTip": "OnlineShopWebApp\\Views\\Shared\\_Layout.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-05-05T12:53:36.328Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-05T12:53:36.328Z"
             },
             {
               "$type": "Document",
@@ -96,8 +95,7 @@
               "RelativeToolTip": "OnlineShopWebApp\\Program.cs",
               "ViewState": "AgIAADAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-05T12:52:46.139Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-05T12:52:46.139Z"
             }
           ]
         }
