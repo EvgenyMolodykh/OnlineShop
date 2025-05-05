@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ololo\\OneDrive\\Рабочий стол\\Новая папка\\OnlineShop\\OnlineShopWebApp\\OnlineShopWebApp.csproj": {}
+    "C:\\Users\\ololo\\OneDrive\\Рабочий стол\\OnlineShpoASP\\OnlineShop\\OnlineShopWebApp\\OnlineShopWebApp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ololo\\OneDrive\\Рабочий стол\\Новая папка\\OnlineShop\\OnlineShop.Db\\OnlineShop.Db.csproj": {
+    "C:\\Users\\ololo\\OneDrive\\Рабочий стол\\OnlineShpoASP\\OnlineShop\\OnlineShop.Db\\OnlineShop.Db.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ololo\\OneDrive\\Рабочий стол\\Новая папка\\OnlineShop\\OnlineShop.Db\\OnlineShop.Db.csproj",
+        "projectUniqueName": "C:\\Users\\ololo\\OneDrive\\Рабочий стол\\OnlineShpoASP\\OnlineShop\\OnlineShop.Db\\OnlineShop.Db.csproj",
         "projectName": "OnlineShop.Db",
-        "projectPath": "C:\\Users\\ololo\\OneDrive\\Рабочий стол\\Новая папка\\OnlineShop\\OnlineShop.Db\\OnlineShop.Db.csproj",
+        "projectPath": "C:\\Users\\ololo\\OneDrive\\Рабочий стол\\OnlineShpoASP\\OnlineShop\\OnlineShop.Db\\OnlineShop.Db.csproj",
         "packagesPath": "C:\\Users\\ololo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ololo\\OneDrive\\Рабочий стол\\Новая папка\\OnlineShop\\OnlineShop.Db\\obj\\",
+        "outputPath": "C:\\Users\\ololo\\OneDrive\\Рабочий стол\\OnlineShpoASP\\OnlineShop\\OnlineShop.Db\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -86,14 +86,14 @@
         }
       }
     },
-    "C:\\Users\\ololo\\OneDrive\\Рабочий стол\\Новая папка\\OnlineShop\\OnlineShopWebApp\\OnlineShopWebApp.csproj": {
+    "C:\\Users\\ololo\\OneDrive\\Рабочий стол\\OnlineShpoASP\\OnlineShop\\OnlineShopWebApp\\OnlineShopWebApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ololo\\OneDrive\\Рабочий стол\\Новая папка\\OnlineShop\\OnlineShopWebApp\\OnlineShopWebApp.csproj",
+        "projectUniqueName": "C:\\Users\\ololo\\OneDrive\\Рабочий стол\\OnlineShpoASP\\OnlineShop\\OnlineShopWebApp\\OnlineShopWebApp.csproj",
         "projectName": "OnlineShopWebApp",
-        "projectPath": "C:\\Users\\ololo\\OneDrive\\Рабочий стол\\Новая папка\\OnlineShop\\OnlineShopWebApp\\OnlineShopWebApp.csproj",
+        "projectPath": "C:\\Users\\ololo\\OneDrive\\Рабочий стол\\OnlineShpoASP\\OnlineShop\\OnlineShopWebApp\\OnlineShopWebApp.csproj",
         "packagesPath": "C:\\Users\\ololo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ololo\\OneDrive\\Рабочий стол\\Новая папка\\OnlineShop\\OnlineShopWebApp\\obj\\",
+        "outputPath": "C:\\Users\\ololo\\OneDrive\\Рабочий стол\\OnlineShpoASP\\OnlineShop\\OnlineShopWebApp\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -115,8 +115,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\ololo\\OneDrive\\Рабочий стол\\Новая папка\\OnlineShop\\OnlineShop.Db\\OnlineShop.Db.csproj": {
-                "projectPath": "C:\\Users\\ololo\\OneDrive\\Рабочий стол\\Новая папка\\OnlineShop\\OnlineShop.Db\\OnlineShop.Db.csproj"
+              "C:\\Users\\ololo\\OneDrive\\Рабочий стол\\OnlineShpoASP\\OnlineShop\\OnlineShop.Db\\OnlineShop.Db.csproj": {
+                "projectPath": "C:\\Users\\ololo\\OneDrive\\Рабочий стол\\OnlineShpoASP\\OnlineShop\\OnlineShop.Db\\OnlineShop.Db.csproj"
               }
             }
           }
