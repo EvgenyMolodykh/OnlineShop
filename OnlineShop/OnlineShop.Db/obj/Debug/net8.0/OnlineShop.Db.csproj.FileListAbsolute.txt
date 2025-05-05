@@ -1,0 +1,30 @@
+C:\Users\ololo\OneDrive\Рабочий стол\Новая папка\OnlineShop\OnlineShop.Db\bin\Debug\net8.0\OnlineShop.Db.deps.json
+C:\Users\ololo\OneDrive\Рабочий стол\Новая папка\OnlineShop\OnlineShop.Db\bin\Debug\net8.0\OnlineShop.Db.runtimeconfig.json
+C:\Users\ololo\OneDrive\Рабочий стол\Новая папка\OnlineShop\OnlineShop.Db\bin\Debug\net8.0\OnlineShop.Db.dll
+C:\Users\ololo\OneDrive\Рабочий стол\Новая папка\OnlineShop\OnlineShop.Db\bin\Debug\net8.0\OnlineShop.Db.pdb
+C:\Users\ololo\OneDrive\Рабочий стол\Новая папка\OnlineShop\OnlineShop.Db\obj\Debug\net8.0\OnlineShop.Db.csproj.AssemblyReference.cache
+C:\Users\ololo\OneDrive\Рабочий стол\Новая папка\OnlineShop\OnlineShop.Db\obj\Debug\net8.0\OnlineShop.Db.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ololo\OneDrive\Рабочий стол\Новая папка\OnlineShop\OnlineShop.Db\obj\Debug\net8.0\OnlineShop.Db.AssemblyInfoInputs.cache
+C:\Users\ololo\OneDrive\Рабочий стол\Новая папка\OnlineShop\OnlineShop.Db\obj\Debug\net8.0\OnlineShop.Db.AssemblyInfo.cs
+C:\Users\ololo\OneDrive\Рабочий стол\Новая папка\OnlineShop\OnlineShop.Db\obj\Debug\net8.0\OnlineShop.Db.csproj.CoreCompileInputs.cache
+C:\Users\ololo\OneDrive\Рабочий стол\Новая папка\OnlineShop\OnlineShop.Db\obj\Debug\net8.0\OnlineShop.Db.sourcelink.json
+C:\Users\ololo\OneDrive\Рабочий стол\Новая папка\OnlineShop\OnlineShop.Db\obj\Debug\net8.0\OnlineShop.Db.dll
+C:\Users\ololo\OneDrive\Рабочий стол\Новая папка\OnlineShop\OnlineShop.Db\obj\Debug\net8.0\refint\OnlineShop.Db.dll
+C:\Users\ololo\OneDrive\Рабочий стол\Новая папка\OnlineShop\OnlineShop.Db\obj\Debug\net8.0\OnlineShop.Db.pdb
+C:\Users\ololo\OneDrive\Рабочий стол\Новая папка\OnlineShop\OnlineShop.Db\obj\Debug\net8.0\OnlineShop.Db.genruntimeconfig.cache
+C:\Users\ololo\OneDrive\Рабочий стол\Новая папка\OnlineShop\OnlineShop.Db\obj\Debug\net8.0\ref\OnlineShop.Db.dll
+C:\Users\ololo\OneDrive\Рабочий стол\OnlineShpoASP\OnlineShop\OnlineShop.Db\bin\Debug\net8.0\OnlineShop.Db.deps.json
+C:\Users\ololo\OneDrive\Рабочий стол\OnlineShpoASP\OnlineShop\OnlineShop.Db\bin\Debug\net8.0\OnlineShop.Db.runtimeconfig.json
+C:\Users\ololo\OneDrive\Рабочий стол\OnlineShpoASP\OnlineShop\OnlineShop.Db\bin\Debug\net8.0\OnlineShop.Db.dll
+C:\Users\ololo\OneDrive\Рабочий стол\OnlineShpoASP\OnlineShop\OnlineShop.Db\bin\Debug\net8.0\OnlineShop.Db.pdb
+C:\Users\ololo\OneDrive\Рабочий стол\OnlineShpoASP\OnlineShop\OnlineShop.Db\obj\Debug\net8.0\OnlineShop.Db.csproj.AssemblyReference.cache
+C:\Users\ololo\OneDrive\Рабочий стол\OnlineShpoASP\OnlineShop\OnlineShop.Db\obj\Debug\net8.0\OnlineShop.Db.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ololo\OneDrive\Рабочий стол\OnlineShpoASP\OnlineShop\OnlineShop.Db\obj\Debug\net8.0\OnlineShop.Db.AssemblyInfoInputs.cache
+C:\Users\ololo\OneDrive\Рабочий стол\OnlineShpoASP\OnlineShop\OnlineShop.Db\obj\Debug\net8.0\OnlineShop.Db.AssemblyInfo.cs
+C:\Users\ololo\OneDrive\Рабочий стол\OnlineShpoASP\OnlineShop\OnlineShop.Db\obj\Debug\net8.0\OnlineShop.Db.csproj.CoreCompileInputs.cache
+C:\Users\ololo\OneDrive\Рабочий стол\OnlineShpoASP\OnlineShop\OnlineShop.Db\obj\Debug\net8.0\OnlineShop.Db.sourcelink.json
+C:\Users\ololo\OneDrive\Рабочий стол\OnlineShpoASP\OnlineShop\OnlineShop.Db\obj\Debug\net8.0\OnlineShop.Db.dll
+C:\Users\ololo\OneDrive\Рабочий стол\OnlineShpoASP\OnlineShop\OnlineShop.Db\obj\Debug\net8.0\refint\OnlineShop.Db.dll
+C:\Users\ololo\OneDrive\Рабочий стол\OnlineShpoASP\OnlineShop\OnlineShop.Db\obj\Debug\net8.0\OnlineShop.Db.pdb
+C:\Users\ololo\OneDrive\Рабочий стол\OnlineShpoASP\OnlineShop\OnlineShop.Db\obj\Debug\net8.0\OnlineShop.Db.genruntimeconfig.cache
+C:\Users\ololo\OneDrive\Рабочий стол\OnlineShpoASP\OnlineShop\OnlineShop.Db\obj\Debug\net8.0\ref\OnlineShop.Db.dll
