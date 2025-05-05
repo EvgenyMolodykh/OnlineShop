@@ -16,3 +16,78 @@
 /OnlineShop/OnlineShopWebApp/obj/Debug/net8.0/OnlineShopWebApp.AssemblyInfo.cs
 /OnlineShop/OnlineShopWebApp/obj/Debug/net8.0/OnlineShopWebApp.csproj.AssemblyReference.cache
 /OnlineShop/OnlineShop.Db/obj/Debug/net8.0/OnlineShop.Db.AssemblyInfo.cs
+
+# =========================
+# Временные файлы IDE
+# =========================
+# Visual Studio
+**/.vs/
+**/*.suo
+**/*.user
+**/*.userosscache
+**/*.sln.docstates
+**/*.sln.ide
+**/*.csproj.user
+**/*.csproj.ide
+
+# JetBrains Rider
+**/.idea/
+**/*.sln.iml
+
+# VS Code
+**/.vscode/
+!.vscode/extensions.json
+
+# =========================
+# Сборки и артефакты
+# =========================
+# Бинарные файлы
+**/bin/
+**/obj/
+**/out/
+**/publish/
+
+# Файлы компиляции
+**/*.dll
+**/*.exe
+**/*.pdb
+**/*.mdb
+
+# =========================
+# Системные и локальные файлы
+# =========================
+# macOS
+**/.DS_Store
+
+# Windows
+**/Thumbs.db
+**/desktop.ini
+
+# Linux
+**/*~
+
+# =========================
+# Инструменты и плагины
+# =========================
+# GitHub Copilot
+**/CopilotIndices/
+
+# ReSharper
+**/_ReSharper.*/
+**/*.DotSettings.user
+
+# Node.js
+**/node_modules/
+**/npm-debug.log
+
+
+# =========================
+# Другое
+# =========================
+# Логи
+**/*.log
+**/*.log.*
+
+# Тестовые файлы
+**/TestResults/
+**/coverage/
