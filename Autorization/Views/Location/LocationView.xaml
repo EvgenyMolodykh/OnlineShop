@@ -5,13 +5,77 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:WeatherAppWPF.Views.Location"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
+             d:DesignHeight="450" d:DesignWidth="800"
+             xmlns:vm="clr-namespace:WeatherAppWPF.ViewModels">
+    <UserControl.DataContext>
+        <vm:LocationViewViewModel/>
+    </UserControl.DataContext>
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="32*"/>
-            <RowDefinition Height="13*"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
-        <Button Content="Button" HorizontalAlignment="Left" Margin="302,225,0,0" VerticalAlignment="Top"/>
+        
+        <TextBlock 
+            Grid.Row="0" 
+            Text="Locations" 
+            FontSize="24" 
+            FontWeight="Bold" 
+            HorizontalAlignment="Center" 
+            Margin="0,10,0,10">
+        </TextBlock>
+        
+        <StackPanel Grid.Row="1" Orientation="Vertical" Margin="20">
+            <Grid Width="300">
+                <TextBox x:Name="LocationInputTextBox" 
+         BorderBrush="#FFFFFF" 
+         BorderThickness="2" 
+         Padding="10" 
+         Background="#FFFFFF"
+         Text="Введите название локации"/>
+            </Grid>
+        </StackPanel>
+        
+        <StackPanel Grid.Row="2" Orientation="Vertical" Margin="20">
+            <TextBlock Text="Selected location:" 
+                       FontWeight="SemiBold" 
+                       Margin="0,10,0,5"/>
+            <Border BorderBrush="#FFFFFF" 
+                    BorderThickness="2" 
+                    CornerRadius="20" 
+                    Padding="10" 
+                    Background="#FFFFFF">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBlock 
+                        Text="Владикавказ" 
+                        Grid.Column="1" 
+                        Margin="10,0" 
+                        VerticalAlignment="Center"/>
+                </Grid>
+            </Border>
+        </StackPanel>
 
+        <StackPanel Grid.Row="3" Orientation="Vertical" Margin="20">
+            <TextBlock Text="Favourite locations:" FontWeight="SemiBold" Margin="0,10,0,5"/>
+            <Border BorderBrush="#FFFFFF" 
+                    BorderThickness="2" 
+                    CornerRadius="20" 
+                    Padding="10" 
+                    Background="#FFFFFF">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Text="Избранное" Grid.Column="1" Margin="10,0" VerticalAlignment="Center"/>
+                </Grid>
+            </Border>
+        </StackPanel>
     </Grid>
 </UserControl>
