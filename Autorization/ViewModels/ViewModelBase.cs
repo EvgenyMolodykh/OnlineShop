@@ -8,7 +8,7 @@ namespace WeatherAppWPF.ViewModels
         public event PropertyChangedEventHandler? PropertyChanged;
         protected void OnPropertyChanged([CallerMemberName] string prop = "")
         {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(prop));
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(prop)); 
         }
     }
 }
