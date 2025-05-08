@@ -2,8 +2,8 @@
 
 namespace WeatherAppWPF.ViewModels
 {
-    public class LocationViewViewModel : INotifyPropertyChanged
+    public class LocationViewViewModel : ViewModelBase
     {
-        public event PropertyChangedEventHandler? PropertyChanged;
+        
     }
 }

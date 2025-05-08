@@ -36,6 +36,12 @@
             <Setter Property="Height" Value="Auto"/>
             <Setter Property="Width" Value="75"/>
         </Style>
+        <DataTemplate DataType="{x:Type vm:HomeViewViewModel}">
+            <homeView:HomeView DataContext="{Binding}"/>
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type vm:LocationViewViewModel}">
+            <locationView:LocationView DataContext="{Binding}"/>
+        </DataTemplate>
     </Window.Resources>
 
     <Grid>
@@ -109,8 +115,9 @@
                 <Button Style="{StaticResource LeftPanelButton}" Content="Close"></Button>
             </StackPanel>
             <Grid Grid.Column="1">
-                <homeView:HomeView DataContext="{Binding HomeViewModel}"/>
-                <locationView:LocationView DataContext="{Binding LocationViewViewModel}"/>
+                <!--<homeView:HomeView DataContext="{Binding HomeViewModel}"/>
+                <locationView:LocationView DataContext="{Binding LocationViewViewModel}"/>-->
+                <ContentControl Content="{Binding CurrentViewModel}"/>
             </Grid>
         </Grid>
 

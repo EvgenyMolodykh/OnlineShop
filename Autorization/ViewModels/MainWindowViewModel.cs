@@ -6,36 +6,21 @@ using WeatherAppWPF.Views.Location;
 
 namespace WeatherAppWPF.ViewModels
 {
-    public partial class MainWindowViewModel : INotifyPropertyChanged
+    public partial class MainWindowViewModel : ViewModelBase
     {
-        public event PropertyChangedEventHandler? PropertyChanged;
         public ICommand? HomeCommand { get; set; }
         public ICommand? LocationCommand { get; set; }
 
-        private HomeViewViewModel homeViewModel;
+        private ViewModelBase currentViewModel;
 
-        public HomeViewViewModel HomeViewModel
+        public ViewModelBase CurrentViewModel
         {
-            get { return homeViewModel; }
+            get { return currentViewModel; }
             set { 
-                homeViewModel = value;
+                currentViewModel = value;
                 OnPropertyChanged();
             }
         }
-
-
-        private LocationViewViewModel locationViewViewModel;
-
-        public LocationViewViewModel LocationViewViewModel
-        {
-            get { return locationViewViewModel; }
-            set
-            {
-                locationViewViewModel = value;
-                OnPropertyChanged();
-            }
-        }
-
 
         public MainWindowViewModel()
         {
@@ -52,10 +37,8 @@ namespace WeatherAppWPF.ViewModels
 
         private void OpenLocationView(object obj)
         {
-            LocationViewViewModel = new LocationViewViewModel();
+            CurrentViewModel = new LocationViewViewModel();
         }
-
-
 
         private bool CanOpenHomeView(object arg)
         {
@@ -64,15 +47,7 @@ namespace WeatherAppWPF.ViewModels
 
         private void OpenHomeView(object obj)
         {
-            HomeViewModel = new HomeViewViewModel();
-        }
-
-        public void OnPropertyChanged([CallerMemberName] string prop = "")
-        {
-            if (PropertyChanged != null)
-            {
-                PropertyChanged(this, new PropertyChangedEventArgs(prop));
-            }
+            CurrentViewModel = new HomeViewViewModel();
         }
     }
 }
